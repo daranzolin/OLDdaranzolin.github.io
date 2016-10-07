@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-##A bit about me
+A bit about me
 
 First I wanted to play in the NBA. Then I wanted to be a dusty scholar. Now I want to be a nerdy #rstats developer.
 
