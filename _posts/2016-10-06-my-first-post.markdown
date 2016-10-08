@@ -6,8 +6,8 @@ categories: jekyll update
 ---
 While neglecting my Python coursework this fall, [I wrote an rstats package called rcanvas.](https://github.com/daranzolin/rcanvas) 
 `rcanvas` is an R client for the Canvas LMS API. It makes getting course data from your institution's Canvas easy, and I've utilized it
-in a variety of ways at work. And despite the Canvas Developer community's tepid response, I am optimistic about its future. Perhaps
-a quick demonstration will help.
+in a variety of ways at work. [And despite the Canvas Developer community's tepid response,](https://community.canvaslms.com/message/50845) 
+I am optimistic about its future. Perhaps a quick demonstration will help.
 
 In this post, I will show how to prepare progress updates with R. This post only addresses getting the necessary data from Canvas,
 because [Jenny Bryan already has a fantastic tutorial on sending the emails.](https://github.com/jennybc/send-email-with-r) Note: before reading on, 
