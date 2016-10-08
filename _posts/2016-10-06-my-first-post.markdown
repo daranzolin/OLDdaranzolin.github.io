@@ -1,27 +1,57 @@
 ---
 layout: post
-title:  "My Packages"
+title:  "Prepare Progress Reports to Email with R, Canvas, and rcanvas"
 date:   2016-10-06 21:00:02 -0700
 categories: jekyll update
 ---
-While neglecting my Python coursework this fall, I've written two #rstats packages: [rcicero](https://github.com/daranzolin/rcicero) and [rcanvas.](https://github.com/daranzolin/rcanvas) 
-Both are R clients for web APIs. Neither are super impressive. If you're an activist of sorts, `rcicero` may interest you, 
-and if you're an educator on the Canvas LMS, `rcanvas` could help. 
+While neglecting my Python coursework this fall, [I wrote an rstats package called rcanvas.](https://github.com/daranzolin/rcanvas) 
+`rcanvas` is an R client for the Canvas LMS API. It makes getting course data from your institution's Canvas easy, and I've utilized it
+in a variety of ways at work. And despite the Canvas Developer community's tepid response, I am optimistic about its future. Perhaps
+a quick demonstration will help.
 
-Here's a code snippet from `rcicero`:
+In this post, I will show how to prepare progress updates with R. This post only addresses getting the necessary data from Canvas,
+because [Jenny Bryan already has a fantastic tutorial on sending the emails.](https://github.com/jennybc/send-email-with-r) Note: before reading on, 
+make sure your `CANVAS_API_TOKEN` is an environment variable in your `.Renviron`.
 
-```
-library(rcicero)
-set_token_and_user("your_account_email_address", "your_password")
-
-jl <- get_official(first_name = "John", last_name = "Lewis")
-```
-
-And here's a code snippet from `rcanvas`:
+First, we load the required packages:
 
 ```
 library(rcanvas)
-items <- get_course_items(course_id = 20, item = "users", include = "email")
+library(tidyverse) #wow, this line really is a thing a beauty
 ```
 
-More `rcicero` and `rcanvas` goodness is forthcoming.
+Next, we'll obtain the course ids for the courses to which we wish to send updates. At Scout I would chain a
+`filter()` clause to `get_course_list()` to specify the precise courses, but that would be unique to us. 
+
+```
+courses <- get_course_list()
+```
+
+`courses` is a `data.frame` with a variety of course information. To get each student's current grade *and* email, we'll
+have to make two separate calls to `get_course_items()` within a custom function before iterating through a vector
+of course ids.
+
+```
+get_grades_and_emails <- function(id) {
+    grades <- get_course_items(id, "enrollments") %>%
+        filter(role == "StudentEnrollment") %>%
+        select(user.sis_user_id, user.name, grades.current_score, course_id)
+    emails <- get_course_items(id, "users", include = "email") %>%
+        select(sis_user_id, email)
+    left_join(grades, emails, by = c("user.sis_user_id" = "sis_user_id")
+}
+
+safe_function <- possibly(get_grades_and_emails, NULL) #avoids error failing
+
+student_data <- courses$id %>%
+    map(safe_function) %>%
+    map_df(bind_rows) %>%
+    left_join(courses %>% select(id, course_code),
+              by = c("course_id" = "id"))
+```
+
+`student_data` now contains all the necessary data: each student's name, grade, email, and course name (or code). With `sprintf()`, you can 
+construct a prose message that ties each of these elements in as stern or celebratory fashion as you wish.
+
+More `rcanvas` functionality is forthcoming.
+
