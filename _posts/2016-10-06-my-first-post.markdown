@@ -20,8 +20,8 @@ library(rcanvas)
 library(tidyverse) #wow, this line really is a thing a beauty
 ```
 
-Next, we'll obtain the course ids for the courses to which we wish to send updates. At Scout I would chain a
-`filter()` clause to `get_course_list()` to specify the precise courses, but that would be unique to us. 
+Next, we'll obtain the course ids for the courses to which we wish to send updates. At work I would chain a
+`filter()` clause to `get_course_list()` to specify the precise courses, but that would be unique to me. 
 
 ```
 courses <- get_course_list()
@@ -46,7 +46,7 @@ safe_function <- possibly(get_grades_and_emails, NULL) #avoids error failing
 student_data <- courses$id %>%
     map(safe_function) %>%
     map_df(bind_rows) %>%
-    left_join(courses %>% select(id, course_code),
+    left_join(courses %>% select(id, course_code), #here we join the course name onto the data.frame
               by = c("course_id" = "id"))
 ```
 
