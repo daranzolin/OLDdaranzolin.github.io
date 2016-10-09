@@ -5,7 +5,7 @@ date:   2016-10-06 21:00:02 -0700
 categories: jekyll update
 ---
 While neglecting my Python coursework this fall, [I wrote an rstats package called rcanvas.](https://github.com/daranzolin/rcanvas) 
-`rcanvas` is an R client for the Canvas LMS API. It makes getting course data from your institution's Canvas easy, and I've utilized it
+`rcanvas` is an R client for the Canvas LMS API. It makes getting course data from your institution's Canvas LMS easy, and I've utilized it
 in a variety of ways at work. [And despite the Canvas Developer community's tepid response,](https://community.canvaslms.com/message/50845) 
 I am optimistic about its future. Perhaps a quick demonstration will help.
 
