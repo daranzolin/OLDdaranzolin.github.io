@@ -39,11 +39,11 @@ coords <- zipcode %>%
 ### Get the Twitter Handles 
 
 Now I need to pass each pair of coordinates through the Cicero API with a custom function that gets each senator's twitter account, and,
-just for fun, their party. Warning: the code below is fairly expensive--it will run you about 59 Cicero API credits. 
+just for fun, their party:
 
 ```
 get_party_and_twitter_account <- function(lat, lon, district_type) {
-  x <- get_official(lat = lat, lon = lon, district_type = district_type)
+  x <- get_official(lat = lat, lon = lon, district_type = district_type) #FYI get_official() returns a list of data.frames
   twitters <- x$identifiers %>% 
     select(last_name, first_name, identifier, identifier_type) %>% 
     filter(identifier_type == "TWITTER")
@@ -51,7 +51,12 @@ get_party_and_twitter_account <- function(lat, lon, district_type) {
     select(last_name, first_name, party)
   left_join(twitters, parties)
 }
+```
+### Iterate
 
+With our custom function in hand, it's time to iterate with the `purrr` package which is so beautiful and elegant, I can't even bear to look at some of my old code. Warning: the code below is fairly expensive--it will run you about 59 Cicero API credits. 
+
+```
 safe_function <- possibly(get_twitter_account, NULL)
 args <- list(coords$latitude,
              coords$longitude,
