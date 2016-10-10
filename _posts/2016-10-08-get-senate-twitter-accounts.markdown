@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting Each US Senator's Twitter Account with rcicero, Part I"
+title:  "Getting Each US Senator's Twitter Handle with rcicero, Part I"
 date:   2016-10-08 20:36:02 -0700
 categories: jekyll update
 ---
