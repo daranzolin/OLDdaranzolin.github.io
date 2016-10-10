@@ -52,6 +52,7 @@ get_party_and_twitter_account <- function(lat, lon, district_type) {
   left_join(twitters, parties)
 }
 ```
+
 ### Iterate
 
 With our custom function in hand, it's time to iterate with the `purrr` package which is so beautiful and elegant, I can't even bear to look at some of my old code. Warning: the code below is fairly expensive--it will run you about 59 Cicero API credits. 
