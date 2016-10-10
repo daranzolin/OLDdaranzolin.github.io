@@ -35,7 +35,8 @@ coords <- zipcode %>%
   slice(1) %>% 
   filter(!is.na(latitude))
 ```
-### rcicero 
+
+### Get the Twitter Handles 
 
 Now I need to pass each pair of coordinates through the Cicero API with a custom function that gets each senator's twitter account, and,
 just for fun, their party. Warning: the code below is fairly expensive--it will run you about 59 Cicero API credits. 
