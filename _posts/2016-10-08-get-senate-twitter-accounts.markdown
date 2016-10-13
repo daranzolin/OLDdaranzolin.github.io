@@ -58,7 +58,7 @@ get_party_and_twitter_account <- function(lat, lon, district_type) {
 With our custom function in hand, it's time to iterate with the `purrr` package which is so beautiful and elegant, I can't even bear to look at some of my old code. Warning: the code below is fairly expensive--it will run you about 59 Cicero API credits. 
 
 ```
-safe_function <- possibly(get_twitter_account, NULL)
+safe_function <- possibly(get_party_and_twitter_account, NULL)
 args <- list(coords$latitude,
              coords$longitude,
              "NATIONAL_UPPER")
