@@ -10,6 +10,8 @@ While neglecting my Python coursework this fall, [I wrote an rstats package call
 in a variety of ways at work. [And despite the Canvas Developer community's tepid response,](https://community.canvaslms.com/message/50845) 
 I am optimistic about its future. Perhaps a quick demonstration will help.
 
+<!--more-->
+
 In this post, I will show how to prepare progress updates with R. This post only addresses getting the necessary data from Canvas,
 because [Jenny Bryan already has a fantastic tutorial on sending the emails.](https://github.com/jennybc/send-email-with-r) Note: before reading on, 
 make sure your `CANVAS_API_TOKEN` is an environment variable in your `.Renviron`.
