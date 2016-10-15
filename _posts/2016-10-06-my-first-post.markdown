@@ -17,8 +17,10 @@ make sure your `CANVAS_API_TOKEN` is an environment variable in your `.Renviron`
 First, we load the required packages:
 
 ```
+{% highlight r %}
 library(rcanvas)
 library(tidyverse) #wow, this line really is a thing a beauty
+{% endhighlight %}
 ```
 
 Next, we'll obtain the course ids for the courses to which we wish to send updates. At work I would chain a
