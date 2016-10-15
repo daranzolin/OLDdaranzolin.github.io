@@ -2,7 +2,7 @@
 layout: post
 title:  "US Senator Tweets, Part II"
 date:   2016-10-08 20:36:02 -0700
-categories: Blog
+categories: Tutorial
 tags: twitter R
 ---
 
