@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "US Senator Tweets, Part II"
-date:   2016-10-08 20:36:02 -0700
+date:   2016-10-11 20:36:02 -0700
 categories: Tutorial
 tags: twitter R
 ---
