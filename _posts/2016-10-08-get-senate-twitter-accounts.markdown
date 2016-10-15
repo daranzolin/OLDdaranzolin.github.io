@@ -10,6 +10,8 @@ I spent the majority of the most recent presidential debate thinking of a fun #r
 (1) that it be fun to do; (2) that it showcase some functionality of `rcicero` or `rcanvas`; and (3) that it be interesting 
 to the public. The third objective was admittedly negotiable.
 
+<!--more-->
+
 In the next two posts, I'm going to analyze the tweets from our US senators in response to #debate. Part I will show how to obtain each
 senator's twitter account with the `rcicero` package, and Part II will perform some basic text analysis on the corpus of tweets with the awesome `rtweet` package.
 
