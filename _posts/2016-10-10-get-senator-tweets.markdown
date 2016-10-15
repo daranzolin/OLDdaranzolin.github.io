@@ -4,12 +4,12 @@ title:  "US Senator Tweets, Part II"
 date:   2016-10-08 20:36:02 -0700
 categories: Tutorial
 tags: twitter R
-except: Time to continue where I left off. With each US senator's twitter handle handled, it's time to get their tweets 
-following a similar create/use-function-and-iterate pattern.
 ---
 
 Time to continue where I left off. With each US senator's twitter handle handled, it's time to get their tweets 
 following a similar create/use-function-and-iterate pattern.
+
+<!--more-->
 
 ### Prep work
 
