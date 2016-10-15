@@ -24,15 +24,15 @@ library(tidyverse) #wow, this line really is a thing a beauty
 Next, we'll obtain the course ids for the courses to which we wish to send updates. At work I would chain a
 `filter()` clause to `get_course_list()` to specify the precise courses, but that would be unique to me. 
 
-```
+{% highlight r %}
 courses <- get_course_list()
-```
+{% endhighlight %}
 
 `courses` is a `data.frame` with a variety of course information. To get each student's current grade *and* email, we'll
 have to make two separate calls to `get_course_items()` within a custom function before iterating through a vector
 of course ids.
 
-```
+{% highlight r %}
 get_grades_and_emails <- function(id) {
     grades <- get_course_items(id, "enrollments") %>%
         filter(role == "StudentEnrollment") %>%
@@ -49,7 +49,7 @@ student_data <- courses$id %>%
     map_df(bind_rows) %>%
     left_join(courses %>% select(id, course_code), #here we join the course name onto the data.frame
               by = c("course_id" = "id"))
-```
+{% endhighlight %}
 
 `student_data` now contains all the necessary data: each student's name, grade, email, and course name (or code). With `sprintf()`, you can 
 construct a prose message that ties each of these elements in as stern or celebratory fashion as you wish.
