@@ -3,9 +3,9 @@
 # Site wide configuration
 ####################################
 #
-title: Leonids
-email:
-description: A simple and awesome blog theme powered by jekyll.
+title: david ranzolin
+email: daranzolin@ucscout.org
+description: I hoop, code, and hang with my cat.
 url: # the base hostname & protocol for your site
 
 
@@ -33,13 +33,13 @@ kramdown:
 ####################################
 #
 owner:
-  name: Leonids
+  name: david ranzolin
   avatar: leonids-logo.png
-  job: "A jekyll theme"
-  bio: "A simple and awesome blog theme powered by jekyll."
-  email:
+  job: "#rstats enthusiast"
+  bio: "I hoop, code, and hang with my cat."
+  email: daranzolin@gmail.com
   disqus-shortname:
-  twitter: #username
+  twitter: daranzolin
   facebook: #username
   google:
     plus: #username
@@ -48,10 +48,10 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: daranzolin
   gitlab: #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
+  linkedin: dranzolin
   skype: #username
   xing: #username
   instagram: #username
