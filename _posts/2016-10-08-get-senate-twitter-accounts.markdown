@@ -3,6 +3,7 @@ layout: post
 title:  "Getting Each US Senator's Twitter Handle with rcicero, Part I"
 date:   2016-10-08 20:36:02 -0700
 categories: jekyll update
+tags: rcicero, R, twitter
 ---
 
 I spent the majority of the most recent presidential debate thinking of a fun #rstats project. I had three objectives for the post:
