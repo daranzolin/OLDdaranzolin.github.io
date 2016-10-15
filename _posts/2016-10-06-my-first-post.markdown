@@ -2,7 +2,7 @@
 layout: post
 title:  "Prepare Progress Reports to Email with R, Canvas, and rcanvas"
 date:   2016-10-06 21:00:02 -0700
-categories: jekyll update
+categories: tutorial
 tags: rcanvas R
 ---
 While neglecting my Python coursework this fall, [I wrote an rstats package called rcanvas.](https://github.com/daranzolin/rcanvas) 
