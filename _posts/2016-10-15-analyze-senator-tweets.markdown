@@ -7,14 +7,14 @@ tags: R twitter
 ---
 
 At long lost we come to the end of this series. I confess that I lost interest when--spoiler alert--there was nothing exciting 
-to report here. But for the sake of symmetry, here in Part II we'll delve into the tweets themselves with the awesome `tidytext` package.
+to report here. But for the sake of symmetry, here in Part III we'll delve into the tweets themselves with the awesome `tidytext` package.
 
 Full disclosure: what follows is basically [David Robinson's brilliant analysis of Trump's twitter feed](http://varianceexplained.org/r/trump-tweets/) with a different
 twist: instead of examining tweets *by source*, we're examining them *by party*. 
 
 <!--more-->
 
-We have all the tweets stored in our `sen_tweets` object. Using `tidytext` a dash of regular expressions, we'll unnest each word
+We have all the tweets stored in our `sen_tweets` object. Using `tidytext` and a dash of regular expressions, we'll unnest each word
 within tweets containing "Hillary" or "Clinton". We'll do the same with "Donald" and "Trump" in a separate object:
 
 ```
@@ -144,9 +144,13 @@ My intuition is that these are preceded or followed by negations, which complica
 gone a number of ways, but here's the tweet from Senator Chris Murphy:
 
 ```
+sen_tweets %>% 
+  filter(party == "Democrat",
+         grepl("god", text, ignore.case = TRUE)) %>% 
+  .$text
 "OH MY GOD.  Russia is not killing ISIS, Donald.  They are facilitating the slaughter of civilians.  
 This is Putin's talking points on stage."
 ```
-This ends our series.
+Thus ends our series.
 
 
