@@ -17,7 +17,7 @@ twist: instead of examining tweets *by source*, we're examining them *by party*.
 We have all the tweets stored in our `sen_tweets` object. Using `tidytext` and a dash of regular expressions, we'll unnest each word
 within tweets containing "Hillary" or "Clinton". We'll do the same with "Donald" and "Trump" in a separate object:
 
-```
+{% highlight r %}
 library(tidytext)
 
 reg <- "([^A-Za-z\\d#@']|'(?![A-Za-z\\d#@]))"
@@ -36,19 +36,19 @@ dt_words <- sen_tweets %>%
   unnest_tokens(word, text, token = "regex", pattern = reg) %>%
   filter(!word %in% stop_words$word,
          str_detect(word, "[a-z]"))
-```
+{% endhighlight %}
 
 Next we'll grab the [NRC Emotion Lexicon](http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm) that comes with the `tidytext` package:
 
-```
+{% highlight r %}
 nrc <- sentiments %>%
   filter(lexicon == "nrc") %>%
   select(word, sentiment)
-```
+{% endhighlight %}
 
 **Question: what kinds of sentiments occur when *democratic* senators tweet about Hillary?**
 
-```
+{% highlight r %}
 hc_words %>%
   inner_join(nrc, by = "word") %>%
   filter(party == "Democrat") %>% 
@@ -67,11 +67,11 @@ Source: local data frame [10 x 2]
 8      surprise     4
 9         anger     3
 10      disgust     3
-```
+{% endhighlight %}
 
 **Question: what kinds of sentiments occur when *republican* senators tweet about Hillary?**
 
-```
+{% highlight r %}
 hc_words %>%
   inner_join(nrc, by = "word") %>%
   filter(party == "Republican") %>% 
@@ -90,12 +90,12 @@ Source: local data frame [9 x 2]
 7         fear     2
 8      sadness     2
 9     surprise     2
-```
+{% endhighlight %}
 Hmmm, yea, not really anything interesting to see here. How about party sentiments towards Trump?
 
 **Democrat:**
 
-```
+{% highlight r %}
 Source: local data frame [10 x 2]
 
       sentiment     n
@@ -110,7 +110,7 @@ Source: local data frame [10 x 2]
 8         trust    16
 9           joy    10
 10      disgust     9
-```
+{% endhighlight %}
 
 **Republican:**
 
@@ -143,14 +143,14 @@ Maybe a little more of a sharper contrast. Let's take a look at the "positive" w
 My intuition is that these are preceded or followed by negations, which complicates text analysis. Also, what was that god tweet? Could have
 gone a number of ways, but here's the tweet from Senator Chris Murphy:
 
-```
+{% highlight r %}
 sen_tweets %>% 
   filter(party == "Democrat",
          grepl("god", text, ignore.case = TRUE)) %>% 
   .$text
 "OH MY GOD.  Russia is not killing ISIS, Donald.  They are facilitating the slaughter of civilians.  
 This is Putin's talking points on stage."
-```
+{% endhighlight %}
 Thus ends our series.
 
 
