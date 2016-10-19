@@ -6,7 +6,7 @@ categories: Tutorial
 tags: R twitter
 ---
 
-At long lost we come to the end of this series. I confess that I lost interest when--spoiler alert--there was nothing exciting 
+At long last we come to the end of this series. I confess that I lost interest when--spoiler alert--there was nothing exciting 
 to report here. But for the sake of symmetry, here in Part III we'll delve into the tweets themselves with the awesome `tidytext` package.
 
 Full disclosure: what follows is basically [David Robinson's brilliant analysis of Trump's twitter feed](http://varianceexplained.org/r/trump-tweets/) with a different
