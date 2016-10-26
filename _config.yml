@@ -14,7 +14,7 @@ url: # the base hostname & protocol for your site
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
+timezone:          America/Los_Angeles
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
