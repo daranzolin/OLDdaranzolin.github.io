@@ -27,7 +27,7 @@ edi <- function(student_df) {
     mutate(ethnicity = ifelse(ethnicity %in% unreported_vect, "none reported", ethnicity)) %>% 
     split(.$ethnicity) %>% 
     map(~ nrow(.)/nrow(student_df)/(1-unreported_fraction)) %>% 
-    map(~ (. - (1/13))^2) %>% #There are thirteen reported ethnicities
+    map(~ (. - (1/13))^2) %>% #There are thirteen reported ethnicities in my work
     flatten_dbl()
   diversity_rating <- sqrt(sum(diversity_rating))
   c2 <- -100 * sqrt(13*(13-1))/(13-1)
