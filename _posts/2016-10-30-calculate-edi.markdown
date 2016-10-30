@@ -36,7 +36,7 @@ edi <- function(student_df) {
 
 EDI is calculated on a 0-100 scale: indices closer to zero indicate less diversity, and indices approaching 100 indicate great diversity. 
 As Ed-Data explains:
-> a school that had exactly 1/8th of its students in each of the eight categories would have an Ethnic Diversity Index of 100, and a school where all of the students are the same ethnicity would have an index of 0. In reality, of course, no school has an index of 100 (although a few have diversity indices of 0). Currently the highest index for a school is 76.
+>a school that had exactly 1/8th of its students in each of the eight categories would have an Ethnic Diversity Index of 100, and a school where all of the students are the same ethnicity would have an index of 0. In reality, of course, no school has an index of 100 (although a few have diversity indices of 0). Currently the highest index for a school is 76.
 
 Let's test our function with some simulated data of a perfectly balanced student body:
 
