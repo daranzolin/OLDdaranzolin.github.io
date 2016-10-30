@@ -13,7 +13,7 @@ a reflection of how evenly distributed your students are among the race/ethnicit
 <!--more-->
 
 [The precise formula can be found on Ed-Data's old website,](https://www.ed-data.k12.ca.us/Pages/Ethnic-Diversity-Index-Calculation.aspx) but it is obviously of little value
-until put into a computational environment. Here's one possible instantation in R:
+until put into a computational environment. Here's one possible instantiation in R:
 
 {% highlight r %}
 library(tidyverse)
