@@ -22,7 +22,8 @@ edi <- function(student_df) {
   if (!"ethnicity" %in% names(student_df)) stop("ethnicity must be a column")
   
   unreported_eths <- c("Decline/Don't know", "Other", "")
-  unreported_fraction <- sum(student_df$ethnicity %in% unreported_eths)/sum(!student_df$ethnicity %in% unreported_eths)
+  unreported_fraction <- sum(student_df$ethnicity %in% unreported_eths)/
+                         sum(!student_df$ethnicity %in% unreported_eths)
   diversity_rating <- student_df %>% 
     mutate(ethnicity = ifelse(ethnicity %in% unreported_vect, "none reported", ethnicity)) %>% 
     split(.$ethnicity) %>% 
