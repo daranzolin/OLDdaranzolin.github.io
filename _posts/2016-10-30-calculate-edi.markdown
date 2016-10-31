@@ -7,7 +7,7 @@ tags: R education
 ---
 
 How diverse is your student body? A tour through some classrooms may give you a decent idea. But how diverse is your student body *in relation
-to the school down the street?* To answer that question, you need a more precise measure. Enter [Ethnic Diversity Index (EDI),](https://www.ed-data.k12.ca.us/Pages/EthnicDiversityIndex.aspx)
+to the school across town?* To answer that question, you need a more precise measure. Enter [Ethnic Diversity Index (EDI),](https://www.ed-data.k12.ca.us/Pages/EthnicDiversityIndex.aspx)
 a reflection of how evenly distributed your students are among the race/ethnicity categories reported to the California Department of Education.
 
 <!--more-->
