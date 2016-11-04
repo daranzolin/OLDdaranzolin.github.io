@@ -65,10 +65,12 @@ cat %>%
   group_by(Title) %>% 
   mutate(Subjects = paste(Subjects, collapse = ", ")) %>%
   slice(1)
-  Error in x[needs_ticks] <- paste0("`", gsub("`", "\\\\`", x[needs_ticks]),  : 
-  NAs are not allowed in subscripted assignments
 {% endhighlight %}
 
+```
+  Error in x[needs_ticks] <- paste0("`", gsub("`", "\\\\`", x[needs_ticks]),  : 
+  NAs are not allowed in subscripted assignments
+```
 ...what is that error? Rather than try and debug, I just called upon the `janitor()`:
 
 {% highlight r %}
