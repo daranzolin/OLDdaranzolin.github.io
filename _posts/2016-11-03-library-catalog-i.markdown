@@ -7,8 +7,8 @@ tags: R education library
 ---
 
 I have a habit of boasting about R's innumerable merits. One day, I was celebrating the arrival of a particular R package when my wife stopped
-and asked me if R was so great, why can't I build her an online catalog for her library? I accepted the challenge without hesitation, being 
-infinitely confident in R, but only mildly sure of myself.
+and asked me why--if R was so great--can't it build her an online catalog for her library? I accepted the challenge without hesitation, being 
+infinitely confident in R, but only mildly sure of myself. R's besmirched reputation must be restored.
 
 Some background: my wife is the librarian at a local high school. Her patrons, however, do not have the luxury of an electronic catalog; if they want to 
 find a book, they must pester her. This is annoying for all parties. 
