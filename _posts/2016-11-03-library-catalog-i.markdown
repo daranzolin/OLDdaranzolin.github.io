@@ -26,8 +26,7 @@ into R:
 library(tidyverse)
 library(googlesheets)
 
-cat <- gs_title("MVA Catalog for OPAC")
-cat <- cat %>% 
+cat <- gs_title("MVA Catalog for OPAC") %>% 
   gs_read(ws = "713F4C10")
 {% endhighlight %}
 
