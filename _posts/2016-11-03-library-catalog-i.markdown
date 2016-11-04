@@ -32,6 +32,7 @@ cat <- cat %>%
 {% endhighlight %}
 
 Now, let's inspect what we have:
+
 ```
 cat
 # A tibble: 4 × 22
@@ -44,6 +45,7 @@ cat
 # ... with 17 more variables: X6 <chr>, X7 <chr>, X8 <chr>, X9 <chr>, X10 <chr>, X11 <chr>, X12 <chr>, X13 <chr>,
 #   X14 <chr>, X15 <chr>, X16 <chr>, X17 <chr>, X18 <chr>, X19 <chr>, X20 <chr>, X21 <chr>, X22 <chr>
 ```
+
 Ugh, what a nightmare. From `View()` I got a closer look at the hideousness and observed the following:
 
 1. The column headers were several rows down
