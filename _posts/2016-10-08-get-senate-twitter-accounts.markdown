@@ -3,7 +3,7 @@ layout: post
 title:  "US Senator Tweets, Part I"
 date:   2016-10-08 20:36:02 -0700
 categories: Tutorial
-tags: rcicero R twitter
+tags: rcicero R twitter politics
 ---
 
 I spent the majority of the most recent presidential debate thinking of a fun #rstats project. I had three objectives for the post:
