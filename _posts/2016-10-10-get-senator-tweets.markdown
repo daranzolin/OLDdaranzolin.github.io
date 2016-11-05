@@ -3,7 +3,7 @@ layout: post
 title:  "US Senator Tweets, Part II"
 date:   2016-10-11 20:36:02 -0700
 categories: Tutorial
-tags: twitter R
+tags: twitter R politics
 ---
 
 Time to continue where I left off. With each US senator's twitter handle handled, it's time to get their tweets 
