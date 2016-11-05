@@ -3,7 +3,7 @@ layout: post
 title:  "US Senator Tweets, Part III"
 date:   2016-10-15 20:36:02 -0700
 categories: Tutorial
-tags: R twitter
+tags: R twitter politics
 ---
 
 At long last we come to the end of this series. I confess that I lost interest when--spoiler alert--there was nothing exciting 
