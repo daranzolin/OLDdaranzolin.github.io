@@ -74,7 +74,7 @@ cat %>%
 ```
 ...what is that error? Rather than try and debug, I just called upon the `janitor()`:
 
-{% highlight r %}
+```
 cat %>% 
   fill(Title) %>% 
   group_by(Title) %>% 
@@ -100,10 +100,10 @@ cat %>%
 #   subjects <chr>, lccn <chr>, isbn_all <chr>, publisher <chr>, publish_year <chr>, volume <chr>, edition <chr>,
 #   series <chr>, pages <chr>, reading_level <chr>, target_audience <chr>, statement_of_responsibility <chr>,
 #   awards <chr>, other_detail <chr>, librarian_note <chr>
-{% endhighlight %}
+```
 
 
-The real heros here were `tidyr::fill()` which filled in missing values from the previous Title entry and `janitor::clean_names()`.
+The real heros here were `tidyr::fill()`, which filled in missing values from the previous `Title` entry, and `janitor::clean_names()`, which scrubs the hell out of a character vector.
 When it was all said and done, I could group the multiple subjects together from different rows, collapse them into a single row, slice the top,
 and clean the column names. In Part II I'll jump into `shiny`.
 
