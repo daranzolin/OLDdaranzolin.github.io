@@ -33,10 +33,10 @@ kramdown:
 ####################################
 #
 owner:
-  name: david ranzolin
+  name: David Ranzolin
   avatar: mycroft.JPG
   job: "Research Analyst"
-  bio: '"He had an idea that even when beaten he could steal a little victory by laughing at defeat." -East of Eden'
+  bio: '"He had an idea that even when beaten he could steal a little victory by laughing at defeat."'
   email: daranzolin@gmail.com
   disqus-shortname:
   twitter: daranzolin
