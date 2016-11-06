@@ -3,8 +3,8 @@
 # Site wide configuration
 ####################################
 #
-title: david ranzolin
-email: daranzolin@ucscout.org
+title: davidR
+email: daranzolin@gmail.com
 description: I hoop, code, and hang with my cat.
 url: # the base hostname & protocol for your site
 
@@ -36,7 +36,7 @@ owner:
   name: david ranzolin
   avatar: mycroft.JPG
   job: "Research Analyst"
-  bio: "I hoop, code, and hang with my cat."
+  bio: '"He had an idea that even when beaten he could steal a little victory by laughing at defeat."'
   email: daranzolin@gmail.com
   disqus-shortname:
   twitter: daranzolin
