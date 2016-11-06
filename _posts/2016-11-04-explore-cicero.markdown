@@ -8,7 +8,7 @@ tags: R politics rcicero
 
 Chances are that you now hate politics. "E-mails" makes you perspire, and every Halloween pumpkin bore an eerie resemblance to the Republican nominee.
 So why not channel that hate into something productive, like building interactive web applications and/or learning more about your elected officials?
-In other words, why not flex on our democratic republic with R?!
+In other words, why not make cool stuff with R?
 
 [The Cicero folk recently linked to their elected official locator,](https://live.cicerodata.com/?utm_content=buffer842a7&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 but it only goes live after election day. In the meantime, we can build our own locator with `rcicero` and `shiny`.  
