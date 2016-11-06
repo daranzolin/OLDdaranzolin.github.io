@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a Library Catalog with R"
+title:  "Building a Library Catalog with R, Part I"
 date:   2016-11-03 10:20:02 -0700
 categories: Tutorial
 tags: R education library
