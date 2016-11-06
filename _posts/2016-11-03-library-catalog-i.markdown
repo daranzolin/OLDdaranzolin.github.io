@@ -72,7 +72,7 @@ cat %>%
   Error in x[needs_ticks] <- paste0("`", gsub("`", "\\\\`", x[needs_ticks]),  : 
   NAs are not allowed in subscripted assignments
 ```
-...what is that error? Rather than try and debug, I just called upon the `janitor()`:
+Yikes, there are `NA` values in the column names. Time to call in the `janitor()`:
 
 ```
 cat %>% 
