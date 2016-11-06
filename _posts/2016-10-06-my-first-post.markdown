@@ -48,7 +48,7 @@ safe_function <- possibly(get_grades_and_emails, NULL) #avoids error failing
 
 student_data <- courses$id %>%
     map(safe_function) %>%
-    map_df(bind_rows) %>%
+    bind_rows() %>%
     left_join(courses %>% select(id, course_code), #here we join the course name onto the data.frame
               by = c("course_id" = "id"))
 {% endhighlight %}
