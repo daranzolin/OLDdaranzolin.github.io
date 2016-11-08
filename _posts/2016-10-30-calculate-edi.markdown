@@ -25,7 +25,7 @@ edi <- function(student_df) {
   unreported_fraction <- sum(student_df$ethnicity %in% unreported_eths)/
                          sum(!student_df$ethnicity %in% unreported_eths)
   diversity_rating <- student_df %>% 
-    mutate(ethnicity = ifelse(ethnicity %in% unreported_vect, "none reported", ethnicity)) %>% 
+    filter(!ethnicity %in% unreported_eths) %>% 
     split(.$ethnicity) %>% 
     map(~ nrow(.)/nrow(student_df)/(1-unreported_fraction)) %>% 
     map_dbl(~ (. - (1/13))^2) %>% #There are thirteen reported ethnicities in my work
