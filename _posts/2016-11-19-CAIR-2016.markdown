@@ -12,8 +12,8 @@ to network, share tips and tricks, and even watch a live shoot of ABC's *The Cat
 
 <!--more-->
 
-From the beginning, however, it was clear R was still relegated to the fringe--R was unconscionably omitted from the "favorite statistics
-package" group mingling session, Tableau was the visualization of choice, and of the hundred or so odd sessions, only three were about R. They were:
+From the beginning, it was clear R was still relegated to the fringe: R was unconscionably omitted from the "favorite statistics
+package" group mingling session, Tableau was the visualization software of choice, and of the hundred or so odd sessions, only three were about R. They were:
 
 * Creating Dashboards of Direct and Indirect SLOs Measures in R (Boosalis, Myhre & Binod)
 * R for Everything: Getting, Cleaning, Analyzing, and Visualizing Data (Ranzolin)
