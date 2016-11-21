@@ -6,14 +6,14 @@ categories: Post
 tags: R education 
 ---
 
-Last week I had the good fortune of attending my first CAIR conference in Los Angeles. No, not the Council on American-Islamic Relations, but the [California
-Association for Institutional Research.](http://www.cair.org/) Over 300 administrators, analysts, and enthusiasts decended upon the Millenium Biltmore Hotel
-to network, share tips and tricks, and watch a live shoot of ABC's The Catch. 
+Last week I had the good fortune of attending my first CAIR--no, not the Council on American-Islamic Relations, but the [California
+Association for Institutional Research.](http://www.cair.org/) Over 300 administrators, analysts, and data nerds decended upon the Millenium Biltmore Hotel in Los Angeles
+to network, share tips and tricks, and even watch a live shoot of ABC's The Catch. 
 
 <!--more-->
 
 From the beginning, however, it was clear R was still relegated to the fringe--R was unconscionably omitted from the "favorite statistics
-package" group mingling session. In fact, of the hundred or so odd sessions, three were about R. They were:
+package" group mingling session, Tableau was the visualization of choice, and of the hundred or so odd sessions, only three were about R. They were:
 
 * Creating Dashboards of Direct and Indirect SLOs Measures in R (Boosalis, Myhre & Binod)
 * R for Everything: Getting, Cleaning, Analyzing, and Visualizing Data (Ranzolin)
@@ -34,4 +34,4 @@ will narrate a typical R workflow at Scout from start
 to finish including scripts, plots, HTML and PDF
 reports, and an interactive web application.
 
-It was far from perfect, but I felt good about it on the whole.
+While far from perfect, I felt good about the presentation on the whole.
