@@ -73,6 +73,13 @@ Hideous, right?! Behold the glory of the tidyverse:
 1:3 %>% 
   map(create_df) %>% 
   reduce(left_join, by = "A")
+  
+  A          K R          Q I          P E
+1 a 0.73928418 1 0.98996062 2 0.28084510 3
+2 b 0.23690265 1 0.14713347 2 0.09790211 3
+3 c 0.03932318 1 0.03024889 2 0.22254985 3
+4 d 0.44752161 1 0.06377270 2 0.42092912 3
+5 e 0.47648939 1 0.96873677 2 0.58043129 3
 {% endhighlight %}
 
 There's just no comparison. I need to go back and implement this little trick in [rcicero](https://github.com/daranzolin/rcicero) pronto. 
