@@ -8,8 +8,8 @@ tags: R
 
 I've been encountering lists of data frames both at work and at play. Most of the time, I need only bind them together
 with `dplyr::bind_rows()` or `purrr::map_df()`. But recently I've needed to *join* them by a shared key. This operation is
-decidedly more complex. In fact, I had admitted defeat earlier this year when I allowed `rcicero::get_official()` to return a list of data frames rather than 
-a single, tidy table. Now I know better.
+more complex. In fact, I admitted defeat earlier this year when I allowed `rcicero::get_official()` to return a list of data frames rather than 
+a single, tidy table. Forgiveable at the time, but now I know better.
 
 <!--more-->
 
@@ -55,9 +55,10 @@ df_list
 {% endhighlight %}
 
 Now we have a list of data frames that share one key column: "A". I needed some programmatic way to join each data frame to the next,
-and in my abstract thought, I recalled the reduce function from Python and was ready to bet my life R had something similar. And we do:
-for basers, there's `Reduce()`, but for civilized, tidyverse folk there's `purrr::reduce()`. Here's how to create and merge `df_list` together with
-`Reduce()`:
+and while cycling through abstractions, I recalled the reduce function from Python, and I was ready to bet my life R had something similar. And we do:
+for basers, there's `Reduce()`, but for civilized, tidyverse folk there's `purrr::reduce()`. 
+
+Here's how to create and merge `df_list` together with `Reduce()`:
 
 {% highlight r %}
 df_list <- list()
