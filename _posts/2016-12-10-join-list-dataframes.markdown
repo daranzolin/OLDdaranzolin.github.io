@@ -58,7 +58,7 @@ Now we have a list of data frames that share one key column: "A". I needed some 
 and while cycling through abstractions, I recalled the reduce function from Python, and I was ready to bet my life R had something similar. And we do:
 for basers, there's `Reduce()`, but for civilized, tidyverse folk there's `purrr::reduce()`. 
 
-Here's how to create and merge `df_list` together with `Reduce()`:
+Here's how to create and merge `df_list` together with base R and `Reduce()`:
 
 {% highlight r %}
 df_list <- list()
