@@ -63,7 +63,7 @@ Here's how to create and merge `df_list` together with `Reduce()`:
 {% highlight r %}
 df_list <- list()
 for (i in 1:3) {
-  df_list[[i]] <- create_df(i)
+  df_list[[i]] <- create_df(i) #Yes, you could also use lapply(1:3, create_df), but I went for maximum ugliness
 }
 Reduce(function(x, y) merge(x, y, by = "A", all = TRUE), df_list)
 {% endhighlight %}
