@@ -9,7 +9,7 @@ tags: R, SPSS
 One of the highlights of CAIR 2016 was [Data Mining to Identify Grading Practices,](http://www.cair.org/wp-content/uploads/sites/474/2016/12/NRinthapolKWahl_CAIR2016.pdf) 
 a splendid presentation by Kelly Wahl and Nida Rinthapol of UCLA. But besides the quality of the slides, the eloquence of the speakers,
 and the application of machine learning, I confess I was most intrigued by SPSS, the statistical software. What I felt was excitement--not 
-so much excitement at learning a new tool, but the thrill of a challenge: what they're doing in SPSS, I was determined to replicate in R.
+so much excitement at learning a new tool, but the thrill of a *challenge:* what they're doing in SPSS, I was determined to replicate in R.
 And if Twitter and #rstats are at all representative of the R community, I wager most useRs would have felt something similar. Petty? Probably.
 Insecure? Perhaps. But come hell or high water, anything SPSS can do, R can do better.
 
@@ -20,8 +20,10 @@ I learned some new things along the way, such as dplyr's helpful helper function
 of the #tidyverse and helped abstract my thinking across columns.
 
 In short, we started with a data frame where each row was a student id, term, course, section, and grade. The goal was to reshape the idea into 
-percentiles of each grade earned for each section. If you'd like to follow along and explore on your own, 
+*percentiles* of each grade earned for each section. If you'd like to follow along and explore on your own, 
 Kelly and Nida very helpfully published the sample data available through the url below. 
+
+Script:
 
 {% highlight r %}
 library(tidyverse)
