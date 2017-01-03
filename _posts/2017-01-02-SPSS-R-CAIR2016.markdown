@@ -28,9 +28,7 @@ Script:
 {% highlight r %}
 library(tidyverse)
 library(haven)
-library(stringr)
 
-### Download file
 url <- "http://www.kellywahl.com/CAIR2016/Course_Offering_Enrollments_with_Grades_CAIR.sav"
 destfile <- "cair2016_kmeans.sav"
 if (!file.exists(destfile)) {
