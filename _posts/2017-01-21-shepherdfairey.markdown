@@ -14,6 +14,8 @@ Shepherd Fairey's breathtaking "We the People" project: *Defend Dignity*, *Are G
 
 ![We The People](http://newsinfo.inquirer.net/files/2017/01/We-the-People3-620x274.jpg)
 
+<!--more-->
+
 There's raw power in these images. Each is a portrait of American individuality. Each exudes a quiet serenity and hidden strength. They are somehow
 so alike, yet also so remarkably distinct. At a glimpse they appear angelic, but on closer inspection they bear the unmistakeable 
 contours of human experience. Tough to explain, but am I crazy if I detect at least a modicum of sadness behind each
