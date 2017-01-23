@@ -18,7 +18,7 @@ Shepherd Fairey's breathtaking "We the People" project: *Defend Dignity*, *Are G
 
 There's raw power in these images. Each is a portrait of American individuality. Each exudes a quiet serenity and hidden strength. They are somehow
 so alike, yet also so remarkably distinct. At a glimpse they appear angelic, but on closer inspection they bear the unmistakeable 
-contours of human experience. Tough to explain, but am I crazy if I detect at least a modicum of sadness behind each
+contours of human experience. Impossible to explain, but do I detect at least a modicum of sadness behind each
 expression?
 
 A good--but admittedly artificial--way to further examine the portraits' unity and disunity is to watch them fade into and out of each other.
