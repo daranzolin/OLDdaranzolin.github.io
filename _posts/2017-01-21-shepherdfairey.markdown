@@ -23,7 +23,7 @@ expression?
 
 A good--but admittedly artificial--way to further examine the portraits' unity and disunity is to watch them fade into and out of each other.
 This can be accomplished with the brilliant `magick` package, [courtesy of rOpenSci.](https://ropensci.org/) I'm sure there are websites
-that could accomplish something similar, but creating a gif that morphs each portrait into a cycle is quite simple in R. See below:
+that could do the same, but creating a gif that morphs each portrait into a cycle was just a few lines of code. See below:
 
 {% highlight r %}
 
