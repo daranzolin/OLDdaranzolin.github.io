@@ -14,7 +14,7 @@ to check a word's alternative definitions or locate other occurrences. Wow, that
 <!--more-->
 
 I must have subconsciously drifted back to the site for one reason or another, but whereas previously I had eyes only for exegesis, I now see
-fun software projects. Somewhat miraculously, I am not the first to contemplate technical applications to ancient texts--[someone beat me to it.] 
+fun software projects. Somewhat miraculously, I am not the first to contemplate technical applications to ancient texts--[someone beat me to it.](http://inlustre.net/latinowl/) 
 
 For my own purposes, I confess I don't have any specific applications in mind. I can vaguely imagine an interesting shiny app or tidy text
 analysis, but those are just ideas; a full R package is even more distant. Anyways, I first had/have to conquer Perseus' XML schema, which was/is not fun, and barely rewarding. Thank God for
