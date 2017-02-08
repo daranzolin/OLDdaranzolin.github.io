@@ -26,6 +26,9 @@ in the XML. Here's how I got my data frame catalog:
 
 {% highlight r %}
 
+library(tidyverse)
+library(xml2)
+
 url <- "http://www.perseus.tufts.edu/hopper/CTS?request=GetCapabilities"
 perseus_xml <- GET(url) %>% 
   content("raw") %>% 
