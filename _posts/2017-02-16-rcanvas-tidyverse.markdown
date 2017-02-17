@@ -66,9 +66,9 @@ biology_missing_assignments <- get_course_list(include = c("term", "total_studen
     total_students > 0,
     grepl("Biology", name)) %>% 
   .$id %>% 
-  map_df(get_course_items, "enrollments) %>%
+  map_df(get_course_items, "enrollments") %>%
   filter(type == "StudentEnrollment",
-         enrollment_state == "active) %>%
+         enrollment_state == "active") %>%
   .$user_id %>%
   map_df(get_user_items, "missing_assignments")
 
