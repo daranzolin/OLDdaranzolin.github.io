@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "rcanvas + the tidyverse"
-date:   2017-02-17 20:27:02 -0700
+date:   2017-02-16 20:27:02 -0700
 categories: Post
 tags: R rcanvas
 ---
