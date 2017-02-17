@@ -77,5 +77,9 @@ biology_missing_assignments <- get_course_list(include = c("term", "total_studen
 In sum, getting lots of data very quickly is just a matter of piping the course and user ids into various functions and letting
 the tidyverse do its thing.
 
+### What else can I get?
+
+Lots! User page views, profiles, avatars, and observees, or course discussion topics, assignments, files, modules, pages, quizzes, folders, todos, settings, and more. If it's in the API docs, we've tried to include it.
+
 
 
