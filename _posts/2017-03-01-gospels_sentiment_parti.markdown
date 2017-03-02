@@ -175,12 +175,14 @@ Groups: book [4]
 What's happening in each chapter? 
 
 **John**: Jesus heals a man born blind who is then questioned by the Pharisees. The words "sin" and "blind" appear almost every other sentence.
+
 **Luke**: Jesus preaches the Sermon on the Plains, a devastating rebuke to those who are rich, laughing, and full. "Woe" and "judge" appear often.
-**Mark:** Three longish stories (for Mark) appear here. First, Jesus confronts the Geresene demonianc and drives out the unclean spirits. Second, Jesus heals the woman
-with hemorrages. "Death", "howling", and "wailing" define this pericope.
+
+**Mark:** Three longish stories (for Mark) appear here. First, Jesus confronts the Geresene demonianc and drives out the unclean spirits. Second, Jesus heals the woman with hemorrages. "Death", "howling", and "wailing" define this pericope.
+
 **Matthew:** Jesus rebukes the Pharisees in devastating fashion. I mean, it is brutal. Lots of "woes" and "hypocrites".
 
-In part II I'll trot out some visualizations. Stay tuned.
+I'd say it checks out. In part II we'll trot out some visualizations. Stay tuned.
 
 
 
