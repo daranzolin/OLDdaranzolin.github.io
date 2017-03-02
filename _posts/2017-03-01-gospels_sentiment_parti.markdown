@@ -164,6 +164,9 @@ gospel_words %>%
   filter(chapter != 0) %>%
   top_n(1)
   
+{% endhighlight %} 
+
+```
 Source: local data frame [4 x 5]
 Groups: book [4]
 
@@ -174,7 +177,7 @@ Groups: book [4]
 3    Mark       5            30   236 0.1271186
 4 Matthew      23            37   257 0.1439689
 
-{% endhighlight %}
+```
 
 What's happening in each chapter? 
 
