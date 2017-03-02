@@ -39,7 +39,7 @@ gospels <- perseus_catalog %>%
   map_df(mutate, chapter = row_number())
   
 gospels <- left_join(gospels, perseus_catalog %>% 
-                       mutate(book = str_replace(label, "Gospel according to ", "")) %>% 
+                       mutate(book = stringr::str_replace(label, "Gospel according to ", "")) %>% 
                        select(urn, book), by = "urn")
 
 {% endhighlight %}
