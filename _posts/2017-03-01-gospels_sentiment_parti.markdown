@@ -93,6 +93,10 @@ gospel_words %>%
   group_by(book) %>% 
   slice(1:3)
   
+{% endhighlight %}
+
+```
+  
 Source: local data frame [12 x 3]
 Groups: book [4]
 
@@ -111,7 +115,7 @@ Groups: book [4]
 11 Matthew blessed    17
 12 Matthew    tree    15
 
-{% endhighlight %}
+```
 
 Gotta admit, I did not see "tree" coming. Odd. Given the nativity accounts in Matthew and Luke, seeing "mother" is unsurprising, but I didn't
 expect to see it in Mark too. "Love", "glory", and "true" from John is also unsurprising.
