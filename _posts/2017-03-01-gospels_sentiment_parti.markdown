@@ -6,7 +6,7 @@ categories: Post
 tags: R rperseus
 ---
 
-The purpose of this post is twofold: (1) to introduce `rperseus`, my latest R package; and (2) to venture a sentiment analysis of the 
+The purpose of this post is twofold: (1) to introduce [rperseus, my latest R package;](https://github.com/daranzolin/rperseus) and (2) to venture a sentiment analysis of the 
 four gospels. 
 
 Rivers of ink have been spilled over the unity and disunity of the four gospels. Their intertextualities have inspired almost two millenia of 
@@ -91,7 +91,7 @@ gospel_words %>%
   group_by(book) %>% 
   slice(1:3)
   
-  Source: local data frame [12 x 3]
+Source: local data frame [12 x 3]
 Groups: book [4]
 
       book    word     n
@@ -158,8 +158,6 @@ gospel_words %>%
   filter(chapter != 0) %>%
   top_n(1)
   
-Joining, by = "word"
-Selecting by ratio
 Source: local data frame [4 x 5]
 Groups: book [4]
 
