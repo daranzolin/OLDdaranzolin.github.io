@@ -78,6 +78,8 @@ cleaned_gospels <- gospel_words %>%
 
 {% endhighlight %}
 
+### Sentiment Analysis 
+
 Now the fun begins. What are the most frequently appearing *joyous* words in each gospel? I filtered out "god" so we could see some
 of the more distinctive words.
 
