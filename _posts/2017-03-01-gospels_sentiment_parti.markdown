@@ -73,7 +73,7 @@ gospel_words <- gospels %>%
   unnest_tokens(word, text)
 
 data("stop_words")
-cleaned_gospels <- gospel_words %>%
+gospel_words <- gospel_words %>%
   anti_join(stop_words)
 
 {% endhighlight %}
