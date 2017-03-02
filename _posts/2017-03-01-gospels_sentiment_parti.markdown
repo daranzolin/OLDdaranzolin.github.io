@@ -46,7 +46,7 @@ gospels <- left_join(gospels, perseus_catalog %>%
 
 Let's glance at `gospels`:
 
-{% highlight r %}
+```
 
 glimpse(gospels)
 Observations: 89
@@ -56,7 +56,7 @@ $ text    <chr> "Since many have undertaken to set in order a narrative concerni
 $ chapter <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 2...
 $ book    <chr> "Luke", "Luke", "Luke", "Luke", "Luke", "Luke", "Luke", "Luke", "Luke", "Luke", "Luk...
 
-{% endhighlight %}
+```
 
 Those 89 observations correspond to the 89 chapters combined in Matthew, Mark, Luke, and John.
 
