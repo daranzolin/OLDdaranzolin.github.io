@@ -70,7 +70,7 @@ get_oreilly_author_details <- function(id) {
 Sometime ago, O'Reilley changed the CSS biography selector from "#Biography p" to ".authorbio". When exactly that occurred is unknown,
 but I had to account for the presence of both selectors.
 
-With our scraping in hand, we just iterate through a vector of author ids. Author ids are assigned chronologically, 7290 being the
+With our scraping function in hand, we just iterate through a vector of author ids. Author ids are assigned chronologically, 7290 being the
 most recent. Here I figured the last 290 authors would be a decent sample size:
 
 {% highlight r %}
@@ -114,7 +114,7 @@ Using the same approach, I learned:
 
 Again it's very possible that there are dozens more CEOs, founders, and presidents among the O'Reilley authors, but it's odd they wouldn't include
 those tidbits in their bios. This is good news! You don't have to have a PhD, be a CEO, found an organization, or be president to be an
-O'Reilley author! One of us! One of us!
+O'Reilley author!
 
 Out of curiosity, what are the most common words in O'Reilley bios? 
 
@@ -187,7 +187,7 @@ oreilley_authors %>%
 
 ```
 
-The news keeps getting better! You don't even have to be an expert in *writing* to publish a book! Only 40% of these authors have
+The news keeps getting better! You don't even have to be an expert in *writing* to publish a book! Only 40% of these authors claim
 writing as an expertise. 
 
 ### Conclusion
