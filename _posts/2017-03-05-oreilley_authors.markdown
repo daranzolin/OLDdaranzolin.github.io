@@ -196,6 +196,5 @@ writing as an expertise.
 
 To sum up, *the "average" O'Reilley author does not have their PhD, is not a president or CEO, and is not even an expert writer!* You don't need to be those things either--let that be your inspiration. 
 
-[^1]: Sometime ago, O'Reilley changed the CSS biography selector from "#Biography p" to ".authorbio". When exactly that occurred is unknown,
-but I had to account for the presence of both selectors.
+[^1]: Sometime ago, O'Reilley changed the CSS biography selector from "#Biography p" to ".authorbio". When exactly that occurred is unknown, but I had to account for the presence of both selectors.
 
