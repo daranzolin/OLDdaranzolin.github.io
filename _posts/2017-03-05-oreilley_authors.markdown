@@ -23,7 +23,7 @@ of web scraping. Before getting started, I'd like to assure my readers that I ch
 before writing a line of code. I control-f'd my way through the terms, and nowhere could I find a prohibition against scraping.
 
 My plan was this: (1) scrape each author's bio, twitter handle, and expertises from their author profile; (2) coerce them into a data frame; and
-(3) grep for whatever--"PhD", "CEO", "Founder", etc. My scraping function is below:
+(3) grep for whatever--"PhD", "CEO", "Founder", etc. My scraping function is below:[^1]
 
 {% highlight r %}
 
@@ -66,9 +66,6 @@ get_oreilly_author_details <- function(id) {
 }
 
 {% endhighlight %}
-
-Sometime ago, O'Reilley changed the CSS biography selector from "#Biography p" to ".authorbio". When exactly that occurred is unknown,
-but I had to account for the presence of both selectors.
 
 With our scraping function in hand, we just iterate through a vector of author ids. Author ids are assigned chronologically, 7290 being the
 most recent. Here I figured the last 290 authors would be a decent sample size:
@@ -194,4 +191,7 @@ writing as an expertise.
 
 To sum up, you don't have to be a PhD, a president, a CEO, or even be an expert writing to publish a book with O'Reilley. Let that be
 your inspiration this week. 
+
+[^1]: Sometime ago, O'Reilley changed the CSS biography selector from "#Biography p" to ".authorbio". When exactly that occurred is unknown,
+but I had to account for the presence of both selectors.
 
