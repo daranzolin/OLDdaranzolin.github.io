@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to be an O'Reiley Author"
+title:  "How to be an O'Reilley Author"
 date:   2017-03-05 21:27:02 -0700
 categories: Post
 tags: R scraping
