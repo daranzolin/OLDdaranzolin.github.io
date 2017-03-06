@@ -194,7 +194,7 @@ writing as an expertise.
 
 ### Conclusion
 
-To sum up, you don't have to be a PhD, a president, a CEO, or even be an expert writing to publish a book with O'Reilley. Let that be
+To sum up, you don't have to be a PhD, a president, a CEO, or even be an expert writer to publish a book with O'Reilley. Let that be
 your inspiration this week. 
 
 [^1]: Sometime ago, O'Reilley changed the CSS biography selector from "#Biography p" to ".authorbio". When exactly that occurred is unknown,
