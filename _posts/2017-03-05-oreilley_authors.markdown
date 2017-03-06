@@ -6,7 +6,7 @@ categories: Post
 tags: R scraping
 ---
 
-Earlier today I fantasized about publishing a book through [O'Reilley Media.](https://www.oreilly.com/) Besides producing dozens of essentials
+Earlier today I fantasized about publishing a book through [O'Reilley Media.](https://www.oreilly.com/) Besides producing dozens of essential
 works on programming, data science, and UX, they're the ones responsible for introducing IT nerds to the African Civit, the Binturong, 
 and my persona favorite, the Springhaas. Would zoology textbooks with terminal prompts and monitors be half as interesting? I doubt it.
 
