@@ -86,11 +86,16 @@ With that out of way, let's learn who these authors are.
 
 **Of the 290 authors represented, how many have PhDs?"**
 
-```
+ {% highlight r %}
+ 
 > oreilley_authors %>% 
    filter(!is.na(bio)) %>%  #18 authors do not have bios
    mutate(phd = ifelse(grepl("phd", bio, ignore.case = TRUE), TRUE, FALSE)) %>% 
    count(phd)
+   
+ {% endhighlight %}
+
+```
 # A tibble: 2 × 2
     phd     n
   <lgl> <int>
