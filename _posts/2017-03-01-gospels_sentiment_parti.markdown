@@ -11,7 +11,7 @@ four gospels.
 
 Rivers of ink have been spilled over the unity and disunity of the four gospels. Their intertextualities have inspired almost two millenia of 
 speculation both scholarly and pious. We may never know if Q existed, or discern John's stages of composition, or figure 
-out what in the hell *bdelugma tes eremoseos* (NRSV: "desolating sacriliege") means. But now, almost 2000 years removed from their 
+out what the devil *bdelugma tes eremoseos* (NRSV: "desolating sacriliege") means. But now, almost 2000 years removed from their 
 original composition, we can do a sentiment analysis! And we owe it all to `tidytext` and the 
 good people over at [the Perseus Digital Library.](http://www.perseus.tufts.edu/hopper/)
 
