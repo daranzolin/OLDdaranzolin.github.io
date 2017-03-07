@@ -3,7 +3,7 @@ layout: post
 title:  "Sentiment Analysis of the Four Gospels, Part I"
 date:   2017-03-01 21:27:02 -0700
 categories: Post
-tags: R rperseus
+tags: R rperseus textmining
 ---
 
 The purpose of this post is twofold: (1) to introduce [rperseus, my latest R package;](https://github.com/daranzolin/rperseus) and (2) to venture a sentiment analysis of the 
