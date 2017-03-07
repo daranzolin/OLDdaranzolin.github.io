@@ -3,7 +3,7 @@ layout: post
 title:  "Reshaping Data: R vs. SPSS at CAIR 2016"
 date:   2017-01-02 3:27:02 -0700
 categories: Post
-tags: R, SPSS 
+tags: R SPSS 
 ---
 
 One of the highlights of CAIR 2016 was [Data Mining to Identify Grading Practices,](http://www.cair.org/wp-content/uploads/sites/474/2016/12/NRinthapolKWahl_CAIR2016.pdf) 
