@@ -29,6 +29,7 @@ a data frame. And fifth, I join the perseus catalog back onto our `gospels` data
 
 library(rperseus)
 library(tidyverse)
+library(tidytext)
 
 perseus_catalog <- get_perseus_catalog()
 gospels <- perseus_catalog %>% 
