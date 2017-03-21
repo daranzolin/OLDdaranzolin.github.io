@@ -7,7 +7,7 @@ tags: R scraping
 ---
 
 Earlier today I fantasized about publishing a book through [O'Reilley Media.](https://www.oreilly.com/) Besides producing dozens of essential
-works on programming, data science, and UX, they're the ones responsible for introducing IT nerds to the African Civit, the Binturong, 
+works on programming, data science, and UX, they're the ones responsible for introducing IT folk to the African Civit, the Binturong, 
 and my persona favorite, the Springhaas. Would zoology textbooks with terminal prompts and monitors be half as interesting? I doubt it.
 
 The fantasy ended abruptly, as I remembered that I had a B.A. in English instead of a B.S. in Computer Science, and an M.T.S. instead of an
