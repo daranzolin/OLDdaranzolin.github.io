@@ -11,7 +11,7 @@ works on programming, data science, and UX, they're the ones responsible for int
 and my persona favorite, the Springhaas. Would zoology textbooks with terminal prompts and monitors be half as interesting? I doubt it.
 
 The fantasy ended abruptly, as I remembered that I had a B.A. in English instead of a B.S. in Computer Science, and an M.T.S. instead of an
-MSci. I also assumed that the vast majority of O'Reilley authors hold terminal degrees in their respective fields. But...is 
+MSci. I also assumed that the vast majority of O'Reilley authors hold terminal degrees in their respective fields. But...was 
 that a safe assumption? I went to find out.
 
 <!--more-->
