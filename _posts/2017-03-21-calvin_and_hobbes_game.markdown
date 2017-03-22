@@ -45,7 +45,7 @@ agony or triumph; (5) increment my score; and (6) repeat.
 {% highlight r %}
 
 correct <- 0
-for (comic in comics[1:4]) {
+for (comic in comics) {
   print(image_crop(comic, geometry = "255 x 200"))
   Sys.sleep(5)
   print(comic)
