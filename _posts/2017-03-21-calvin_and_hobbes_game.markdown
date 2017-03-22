@@ -12,7 +12,7 @@ I rank both Calvin and Hobbes as two of the most influential fictional character
 the strip so well, I could predict the dialogue of each strip's final panel while only being shown the first two. Incredulous friends would
 test my ability, and it became a fun game that I've since dominated.
 
-However, what if I want to play and no one is around? Thankfully, my friend R is always there for me.
+But what if I want to play and no one is around? Thankfully, my friend R is always there for me.
 
 <!--more-->
 
