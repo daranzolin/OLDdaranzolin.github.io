@@ -10,7 +10,7 @@ One of my most prized possessions is *The Complete Calvin and Hobbes,* the undis
 cohesive, more emblematic of the vicissitudes of life. I've read and reread those volumes countless times, and
 I rank both Calvin and Hobbes as two of the most influential fictional characters in my life. In fact, I once boasted that I knew
 the strip so well, I could predict the dialogue of each strip's final panel while only being shown the first two. Incredulous friends would
-test my ability, and it became a fun game that I've dominated.
+test my ability, and it became a fun game that I've since dominated.
 
 However, what if I want to play and no one is around? Thankfully, my friend R is always there for me.
 
