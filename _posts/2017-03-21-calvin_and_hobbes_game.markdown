@@ -39,15 +39,21 @@ comics <- map(comics, image_read)
 
 There are 232 pages on the tumblr account, and I want a random one each time I "play". `comics` is now an object with each image strip.
 
-I then needed to: (1) initiate a score; (2) display the cropped strips; (3) wait for me to guess the final panels; (4) display the full strip to either
+I then needed to: (1) initiate a score; (2) display the cropped strips, accounting for whether or not it was a Sunday strip; (3) wait for me to guess the final panels; (4) display the full strip to either
 agony or triumph; (5) increment my score; and (6) repeat. 
 
 {% highlight r %}
 
 correct <- 0
-for (comic in comics) {
-  print(image_crop(comic, geometry = "255 x 200"))
-  Sys.sleep(5)
+for (comic in comics[8:10]) {
+  comic_height <- image_info(comic)$height
+  if (comic_height > 200) {
+    geometry_crop <- "500 x 240" #I chose to crop Sunday strips horizontally, although Bill used his Sunday space creatively.
+  } else {
+    geometry_crop <- "255 x 200"
+  }
+  print(image_crop(comic, geometry = geometry_crop))
+  Sys.sleep(15)
   print(comic)
   answ <- readline(prompt="Did you know the end? ('Y' for Yes, 'N' for No) ")
   if (answ == "Y") {
