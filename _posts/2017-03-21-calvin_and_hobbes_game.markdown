@@ -60,6 +60,6 @@ message("Your score was ", score)
 {% endhighlight %}
 
 There you have it. A *bona fide* Guess-The-Final-Panel-in-a-Calvin-and-Hobbes-Strip game. If you're curious, I just went 4/10. Time
-for another rereading.
+for a reread.
 
 
