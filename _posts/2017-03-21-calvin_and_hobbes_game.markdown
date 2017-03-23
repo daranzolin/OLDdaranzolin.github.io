@@ -9,7 +9,7 @@ tags: R scraping
 One of my most prized possessions is *The Complete Calvin and Hobbes,* the undisputed greatest comic of all time. I defy anyone to name a strip more hilarious, more 
 cohesive, more emblematic of the vicissitudes of life. I've read and reread those volumes countless times, and
 I rank both Calvin and Hobbes as two of the most influential fictional characters in my life. In fact, I once boasted that I knew
-the strip so well, I could predict the dialogue of each strip's final panel while only being shown the first two. Incredulous friends would
+the strip so well, I could predict the content of each strip's final panel while only being shown the first two. Incredulous friends would
 test my ability, and it became a fun game that I've since dominated.
 
 But what if I want to play and no one is around? Thankfully, my friend R is always there for me.
@@ -17,8 +17,8 @@ But what if I want to play and no one is around? Thankfully, my friend R is alwa
 <!--more-->
 
 Thus, I set out to create a "game" whereby I would be shown a portion of a Calvin and Hobbes comic, and I would have
-to guess the ending before time expired. In the end, it was a relatively simple thing to create, thanks to the `rvest` and
-`magick` packages. First, I needed to get the comics from somwhere, and I arrived at a [Calvin and Hobbes Daily tumblr](http://calvinhobbesdaily.tumblr.com/) after
+to guess the ending before time expired. In the end, it was a relatively simple thing to create, thanks to the
+`magick` package. First, I needed to get the comics from somwhere, and I arrived at a [Calvin and Hobbes Daily tumblr](http://calvinhobbesdaily.tumblr.com/) after
 some googling. [Tumblr has terrific API docs,](https://www.tumblr.com/docs/en/api/v2) so hacking together a function that grabbed and read 10 random comics was a piece of cake:
 
 {% highlight r %}
