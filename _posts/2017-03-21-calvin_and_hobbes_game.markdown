@@ -3,7 +3,7 @@ layout: post
 title:  "How well do you know Calvin and Hobbes? An R Game"
 date:   2017-03-21 21:27:02 -0700
 categories: Post
-tags: R scraping
+tags: R
 ---
 
 One of my most prized possessions is *The Complete Calvin and Hobbes,* the undisputed greatest comic of all time. I defy anyone to name a strip more hilarious, more 
