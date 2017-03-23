@@ -26,6 +26,7 @@ some googling. [Tumblr has terrific API docs,](https://www.tumblr.com/docs/en/ap
 library(tidyverse)
 library(httr)
 library(magick)
+library(jsonlite)
 
 get_ten_ch_comics <- function() {
   BASE_URL <- "https://api.tumblr.com"
