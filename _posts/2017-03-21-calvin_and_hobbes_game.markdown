@@ -72,6 +72,6 @@ for (comic in ch_comics) {
 
 {% endhighlight %}
 
-There you have it. A *bona fide* Guess-The-Final-Panel-in-a-Calvin-and-Hobbes-Strip game. Just make sure your RStudio viewer is expanded. And if you're curious, I just went 4/10--time for a reread.
+There you have it. A *bona fide* Guess-The-Final-Panel-in-a-Calvin-and-Hobbes-Strip game. Just make sure your RStudio viewer is expanded. And if you're curious, I just went 4/10. Time for a reread.
 
 
