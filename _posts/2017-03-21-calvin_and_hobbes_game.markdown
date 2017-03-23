@@ -19,53 +19,58 @@ But what if I want to play and no one is around? Thankfully, my friend R is alwa
 Thus, I set out to create a "game" whereby I would be shown a portion of a Calvin and Hobbes comic, and I would have
 to guess the ending before time expired. In the end, it was a relatively simple thing to create, thanks to the `rvest` and
 `magick` packages. First, I needed to get the comics from somwhere, and I arrived at a [Calvin and Hobbes Daily tumblr](http://calvinhobbesdaily.tumblr.com/) after
-some googling. All that remained was scraping and reading the right images:
+some googling. [Tumblr has terrific API docs,](https://www.tumblr.com/docs/en/api/v2) so hacking together a function that grabbed and read 10 random comics was a piece of cake:
 
 {% highlight r %}
 
 library(tidyverse)
-library(rvest)
+library(httr)
 library(magick)
 
-random_url <- sprintf("http://calvinhobbesdaily.tumblr.com/page/%d", sample(1:232, 1))
-comics <- random_url %>% 
-  read_html() %>% 
-  html_nodes("#stat-articles img") %>% 
-  html_attr("src")
+get_ten_ch_comics <- function() {
+  BASE_URL <- "https://api.tumblr.com"
+  url <- modify_url(BASE_URL, 
+                    path = c("v2", "blog", "calvinhobbesdaily.tumblr.com", "posts", "photo"),
+                    query = list(api_key = Sys.getenv("TUMBLR_KEY"),
+                                 limit = 10,
+                                 offset = abs(sample(1:2318, 1) - 10))) 
+  resp <- GET(url)
+  stop_for_status(resp)
+  dat <- resp %>% 
+    content("text") %>% 
+    fromJSON()
+  
+  map(dat$response$posts$photos, function(x) flatten(x)$url) %>% 
+    map(image_read)
+}
 
-comics <- map(comics, image_read)
+comics <- get_ten_ch_comics()
 
 {% endhighlight %}
 
-There are 232 pages on the tumblr account, and I want a random one each time I "play". `comics` is now an object with each image strip.
+There are 2318 posts on the tumblr account, and I want 10 random comics each time I "play".
 
-I then needed to: (1) initiate a score; (2) display the cropped strips, accounting for whether or not it was a Sunday strip; (3) wait for me to guess the final panels; (4) display the full strip to either
-agony or triumph; (5) increment my score; and (6) repeat. 
+I then needed to: (1) display the cropped strips, accounting for whether or not it was a Sunday strip; (2) wait for me to guess the final panels; (3) display the full strip to either
+agony or triumph; and (4) repeat. 
 
 {% highlight r %}
 
-correct <- 0
-for (comic in comics[8:10]) {
+for (comic in ch_comics[1:3]) {
   comic_height <- image_info(comic)$height
-  if (comic_height > 200) {
-    geometry_crop <- "500 x 240" #I chose to crop Sunday strips horizontally, although Bill used his Sunday space creatively.
+  if (comic_height > 275) {
+    geometry_crop <- "800 x 500"
   } else {
-    geometry_crop <- "255 x 200"
+    geometry_crop <- "400 x 260"
   }
   print(image_crop(comic, geometry = geometry_crop))
   Sys.sleep(15)
   print(comic)
-  answ <- readline(prompt="Did you know the end? ('Y' for Yes, 'N' for No) ")
-  if (answ == "Y") {
-    correct <- correct + 1
-  }
+  cat("Press [enter] to continue")
+  line <- readline()
 }
-score <- correct/length(comics)
-message("Your score was ", score)
 
 {% endhighlight %}
 
-There you have it. A *bona fide* Guess-The-Final-Panel-in-a-Calvin-and-Hobbes-Strip game. If you're curious, I just went 4/10. Time
-for a reread.
+There you have it. A *bona fide* Guess-The-Final-Panel-in-a-Calvin-and-Hobbes-Strip game. Just make sure your RStudio viewer is expanded. And if you're curious, I just went 4/10--time for a reread.
 
 
