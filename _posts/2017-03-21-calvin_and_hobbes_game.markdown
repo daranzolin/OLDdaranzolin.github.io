@@ -56,7 +56,7 @@ agony or triumph; and (4) repeat.
 
 {% highlight r %}
 
-for (comic in ch_comics) {
+for (comic in comics) {
   comic_height <- image_info(comic)$height
   if (comic_height > 275) {
     geometry_crop <- "800 x 500"
