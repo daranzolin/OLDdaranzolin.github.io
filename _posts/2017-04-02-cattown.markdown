@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Do cats have different personalities? A Cat Town Cafe Investigation"
+title:  "Do Cats have Different Personalities? A Cat Town Cafe Investigation"
 date:   2017-04-01 21:27:02 -0700
 categories: Post
 tags: R scraping
