@@ -139,7 +139,7 @@ cat_words %>%
 |yukon-and-blizzard  |adventurous, beautiful, chirp, curiosity, eat, experienced, guardian, kitten, playful, quiet, safe, savvy, spirits, tasty |
 |zoe                 |female, happy, pretty, sweet                                                                                              |
 
-Aaayyyyeeee, it kind of works! Yes, there's some redundancy (affection, companion, etc.), but it looks like the Cat Town folk sucessfully ascertained a unique profile for each cat. I'm ready to adopt Yukon and Blizzard, Billy, and Oswald right now.
+Aaayyyyeeee, it kind of works! Yes, there's some redundancy (affection, companion, etc.), but it looks like the Cat Town folk successfully ascertained a unique profile for each cat. I'm ready to adopt Yukon and Blizzard, Billy, and Oswald right now.
 
 I then grouped the cats by category to compare the top three words within each category,
 ostensibly to see if cats within different types are described differently.
