@@ -181,3 +181,5 @@ Groups: cat_type [5]
 
 Yea, not much to see here given the small sample size. 
 
+In sum, cats have personalities. I see it, Cat Town Cafe sees it, R sees it. Case closed.
+
