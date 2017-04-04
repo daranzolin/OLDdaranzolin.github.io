@@ -97,19 +97,56 @@ data("stop_words")
 cat_words <- cat_words %>%
   anti_join(stop_words)
 
+positive_words <- get_sentiments("nrc") %>%
+  filter(sentiment == "positive")
+ 
+cat_words <- cat_words %>% 
+  semi_join(positive_words) 
+
 {% endhighlight %}
 
-I don't believe there's a way to isolate personality traits or adjectives from any of the `tidytext` dictionaries, so I first settled 
-for all "positive" words from the nrc lexicon filtered out some of the fluff. I then grouped by cat category and compared the top three,
-ostensibly to see if cats within different types are described differently. Spoiler alert: this didn't really work.
+I don't believe there's a way to isolate personality traits or adjectives from any of the `tidytext` dictionaries, so I first settled for all "positive" words from the nrc lexicon and filtered out some of the fluff. The idea is to isolate the unique positive traits for each cat and get a sense of their personality row-by-row:
 
 {% highlight r %}
 
-positive_words <- get_sentiments("nrc") %>%
-  filter(sentiment == "positive")
+cat_words %>% 
+  filter(!word %in% c("cafe", "benefit", "action", "favorite", "feeling", "expect", "building")) %>% 
+  distinct(cat_name, word) %>% 
+  group_by(cat_name) %>% 
+  summarize(personality = paste(word, collapse = ", ")) %>% 
+  knitr::kable()
+
+{% endhighlight %}
+
+
+
+|cat_name            |personality                                                                                                               |
+|:-------------------|:-------------------------------------------------------------------------------------------------------------------------|
+|billy               |companion, confidence, curiosity, intelligence, laughter, level, love, observant, patience, praise                        |
+|cosima              |balanced, confident, engaging, friendly, jump, love, playful, share, sweet                                                |
+|darcy               |baby, entertaining, happily, purr, receiving, special, sweet                                                              |
+|einstein            |companion, friendly, king, perfect, prefer, purr, sun, sweet, top, white                                                  |
+|georgia-and-baldwin |calm, confidence, continue, curiosity, dinner, enjoy, fairly, female, friend, grow, patient, real, thriving               |
+|maisy               |beautiful, cautious, charming, companion, female, lovable, lovely, purr, special, sweet                                   |
+|monkey              |balance, confident, entertaining, excited, food, greeting, independence, intelligent, laser, love, share                  |
+|nikki-and-drake     |adventure, calm, continue, curl, entertained, excited, female, grow, intelligent, kitten, restful, savvy                  |
+|oswald              |adoration, attention, buddy, child, confident, curl, friend, loving, savvy, spirit, teens                                 |
+|paisley             |buddy, entertaining, intelligent, jump, level, love, patience, understanding                                              |
+|rowan-and-reed      |affection, curl, enjoy, frisky, lead, ribbon, savvy, shine, sweet, true, willingly                                        |
+|smith               |affection, beautiful, companion, curiosity, cute, entertaining, found, friendly, kitten, learn, perfect, zeal, zest       |
+|trevor              |affection, companion, contact, friend, pretty, unique                                                                     |
+|woolsey             |calm, cute, endless, experienced, friendly, include, lovely, proper, share                                                |
+|yukon-and-blizzard  |adventurous, beautiful, chirp, curiosity, eat, experienced, guardian, kitten, playful, quiet, safe, savvy, spirits, tasty |
+|zoe                 |female, happy, pretty, sweet                                                                                              |
+
+Aaayyyyeeee, it kind of works! Yes, there's some redundancy (affection, companion, etc.), but it looks like the Cat Town folk sucessfully ascertained a unique profile for each cat. I'm ready to adopt Yukon and Blizzard, Billy, and Oswald right now.
+
+I then grouped the cats by category to compare the top three words within each category,
+ostensibly to see if cats within different types are described differently.
+
+{% highlight r %}
 
 cat_words %>% 
-  semi_join(positive_words) %>% 
   count(cat_type, word, sort = TRUE) %>% 
   filter(!word %in% c("cafe", "benefit", "action", "favorite", "feeling", "expect")) %>% 
   group_by(cat_type) %>%
@@ -142,6 +179,5 @@ Groups: cat_type [5]
 
 ```
 
-Yea, there's not much to see here. I'm not sure if there's a better way to programatically identify unique cat personalities,
-but this was a start. I'll consider my own cat and see if there's a Part II in the future.
+Yea, not much to see here given the small sample size. 
 
