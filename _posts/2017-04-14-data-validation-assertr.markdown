@@ -11,7 +11,7 @@ imagine doing all sorts of fun things together in the future, and you can't wait
 first two. 
 
 Such was my introduction to `assertr`, a brilliant data validation package [from rOpenSci.](https://ropensci.org/) Continuing the
-dating analogy, it was love at first sight. `assertr`'s bouquet of functions whisper sweet assurances in your console, 
+dating analogy, it was love at first sight. `assertr`'s bouquet of functions whisper sweet assurances into your console, 
 increasing your confidence, showcasing your versatility, and enhancing your sex appeal. Okay, maybe just the first two again.
 
 <!--more-->
