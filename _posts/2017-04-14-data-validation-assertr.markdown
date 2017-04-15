@@ -92,7 +92,7 @@ Confidence! Failure of either condition would have thrown an error.
 [The assertr vignette](https://cran.r-project.org/web/packages/assertr/vignettes/assertr.html) does a terrific job explaining the nuances of `verify` and `assert`. 
 It's worth a close read.
 
-You can be sure that I will be going on many more dates with `assertr`. I may even write another blog!
+You can be sure that I will be going on many more dates with `assertr`. 
 
 
 
