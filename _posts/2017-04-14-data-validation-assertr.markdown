@@ -17,7 +17,7 @@ increasing your confidence, showcasing your versatility, and enhancing your sex 
 <!--more-->
 
 Here's a little demonstration. At [Scout from the University of California,](https://www.ucscout.org/) we have an internal section code convention.
-Take, for example, the following section code: APBIO112-005. I can infer from this code that (1) this is *AP Biology*; (2) this is
+Take, for example, the following section code: **APBIO112-005**. I can infer from this code that (1) this is *AP Biology*; (2) this is
 a *Core Premium* course; (3) this is the *second semester*; (4) this is *not a teacher section*; and (5) this is the *fifth iteration* of the course. Quite a bit of information
 from 12 characters.
 
