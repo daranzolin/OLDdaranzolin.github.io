@@ -12,7 +12,7 @@ first two.
 
 Such was my introduction to `assertr`, a brilliant data validation package [from rOpenSci.](https://ropensci.org/) It was love at first sight. 
 And much like a great date, `assertr`'s bouquet of functions whisper sweet assurances into your console, 
-increasing your confidence, pushing you forward, and enhancing your sex appeal. Okay, maybe just the first two again. 
+increasing your confidence, pushing you forward, and enhancing your desirability. Okay, maybe just the first two again. 
 Here's a little demonstration. 
 
 <!--more-->
