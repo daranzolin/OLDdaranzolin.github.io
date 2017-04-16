@@ -54,7 +54,7 @@ scout
 
 ```
 
-Five hypotheical section codes, five hypothetiucal end dates, and five hypothetical quantities of students.
+Five hypothetical section codes, five hypothetical end dates, and five hypothetical quantities of students.
 Now, before I begin a formal analysis of this data, I may want to verify some assumptions. 
 Namely, that the section codes are formatted correctly,[^1] that all sections terminate in May, 
 and that each section has more than one and less than 40 students. Here I define a regular expression and 
