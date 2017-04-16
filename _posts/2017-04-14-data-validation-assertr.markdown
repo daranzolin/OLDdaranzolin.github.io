@@ -24,7 +24,7 @@ Let's first create a data frame of hypothetical section codes, end dates, and st
 library(assertr)
 library(tidyverse)
 
-sample_5 <- function(x) sample(x, 5, replace = TRUE)
+sample_5 <- partial(base::sample, size = 5, replace = TRUE)
 
 scout <- tibble(
   section = list(
