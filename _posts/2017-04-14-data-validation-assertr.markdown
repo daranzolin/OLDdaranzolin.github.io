@@ -23,6 +23,7 @@ Let's first create a data frame of hypothetical section codes, end dates, and st
 
 library(assertr)
 library(tidyverse)
+library(stringr)
 
 sample_5 <- partial(base::sample, size = 5, replace = TRUE)
 
