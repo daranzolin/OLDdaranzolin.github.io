@@ -24,17 +24,20 @@ Let's first create a data frame of hypothetical section codes, end dates, and st
 library(assertr)
 library(tidyverse)
 
+sample_5 <- function(x) sample(x, 5, replace = TRUE)
+
 scout <- tibble(
   section = list(
     offerings = c("APBIO", "STATS", "GEOM", "APPSYCH", "USHIS"),
     program = rep(1, 5),
-    option = sample(1:4, 5, replace = TRUE),
-    semester = sample(0:3, 5, replace = TRUE)) %>% 
+    option = sample_5(1:4),
+    semester = sample_5(0:3)
+    ) %>% 
     pmap(paste0) %>% 
-    map2_chr(sample(100:999, 5), paste, sep = "-"),
-  end_date = sample(seq(as.Date("2017-05-01"), as.Date("2017-05-30"), by = 1), 5),
-  students = sample(20:40, 5)
-)
+    map2_chr(sample_5(100:999), paste, sep = "-"),
+  end_date = sample_5(seq(as.Date("2017-05-01"), as.Date("2017-05-30"), by = 1)),
+  students = sample_5(20:40)
+  )
 scout
 
 {% endhighlight %}
