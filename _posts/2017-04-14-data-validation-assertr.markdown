@@ -57,11 +57,7 @@ Namely, that the section codes are formatted correctly,[^1] that all sections te
 and that each section has more than one and less than 40 students. Here I define a regular expression and 
 set the range of end dates:
 
-[^1]: [Scout from the University of California,](https://www.ucscout.org/) uses a clever section code convention. 
-Consider the following code: **APBIO112-005**. We can infer from this code that (1) this is *AP Biology*; 
-(2) this is a *Core Premium* course; (3) this is the *second semester*; (4) this is *not a teacher section*; 
-and (5) this is the *fifth iteration* of the course. I won't bother explaining how, 
-but that's quite a bit of information from 12 alphanumeric characters.
+[^1]: [Scout from the University of California,](https://www.ucscout.org/) uses a clever section code convention. Consider the following code: **APBIO112-005**. We can infer from this code that (1) this is *AP Biology*; (2) this is a *Core Premium* course; (3) this is the *second semester*; (4) this is *not a teacher section*; and (5) this is the *fifth iteration* of the course. I won't bother explaining how, but that's quite a bit of information from 12 alphanumeric characters.
 
 {% highlight r %}
 
