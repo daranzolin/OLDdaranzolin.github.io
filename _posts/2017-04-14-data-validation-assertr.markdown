@@ -11,8 +11,8 @@ imagine doing all sorts of fun things together in the future, and you can't wait
 first two. 
 
 Such was my introduction to `assertr`, a brilliant data validation package [from rOpenSci.](https://ropensci.org/) It was love at first sight. 
-Much like a great date, `assertr`'s bouquet of functions whisper sweet assurances into your console, 
-increasing your confidence, showcasing your versatility, and enhancing your sex appeal. Okay, maybe just the first two again. 
+And much like a great date, `assertr`'s bouquet of functions whisper sweet assurances into your console, 
+increasing your confidence, pushing you forward, and enhancing your sex appeal. Okay, maybe just the first two again. 
 Here's a little demonstration. 
 
 <!--more-->
@@ -60,7 +60,7 @@ Namely, that the section codes are formatted correctly,[^1] that all sections te
 and that each section has more than one and less than 40 students. Here I define a regular expression and 
 set the range of end dates:
 
-[^1]: [Scout from the University of California,](https://www.ucscout.org/) uses a clever section code convention. Consider the following code: **APBIO112-005**. We can infer from this code that (1) this is *AP Biology*; (2) this is a *Core Premium* course; (3) this is the *second semester*; (4) this is *not a teacher section*; and (5) this is the *fifth iteration* of the course. I won't bother explaining how, but that's quite a bit of information from 12 alphanumeric characters.
+[^1]: [Scout from the University of California](https://www.ucscout.org/) uses a clever section code convention. Consider the following code: **APBIO112-005**. We can infer from this code that (1) this is *AP Biology*; (2) this is a *Core Premium* course; (3) this is the *second semester*; (4) this is *not a teacher section*; and (5) this is the *fifth iteration* of the course. I won't bother explaining how, but that's quite a bit of information from 12 alphanumeric characters.
 
 {% highlight r %}
 
