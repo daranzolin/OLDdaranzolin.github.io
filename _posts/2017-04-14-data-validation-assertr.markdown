@@ -10,8 +10,7 @@ Being introduced to a new R package is like going on a really good first date--y
 imagine doing all sorts of fun things together in the future, and you can't wait to blog about the experience. Okay, maybe just the 
 first two. 
 
-Such was my introduction to `assertr`, a brilliant data validation package [from rOpenSci.](https://ropensci.org/) It was love at first sight. 
-And much like a great date, `assertr`'s bouquet of functions whisper sweet assurances into your console, 
+Such was my introduction to `assertr`, a brilliant data validation package [from rOpenSci.](https://ropensci.org/) It was love at first sight. And much like a great date, `assertr`'s bouquet of functions whisper sweet assurances into your console, 
 increasing your confidence, pushing you forward, and enhancing your desirability. Okay, maybe just the first two again. 
 Here's a little demonstration. 
 
@@ -57,11 +56,9 @@ scout
 
 Five hypothetical section codes, five hypothetical end dates, and five hypothetical quantities of students.
 Now, before I begin a formal analysis of this data, I may want to verify some assumptions. 
-Namely, that the section codes are formatted correctly,[^1] that all sections terminate in May, 
+Namely, that the section codes are formatted correctly, that all sections terminate in May, 
 and that each section has more than one and less than 40 students. Here I define a regular expression and 
 set the range of end dates:
-
-[^1]: [Scout from the University of California](https://www.ucscout.org/) uses a clever section code convention. Consider the following code: **APBIO112-005**. We can infer from this code that (1) this is *AP Biology*; (2) this is a *Core Premium* course; (3) this is the *second semester*; (4) this is *not a teacher section*; and (5) this is the *fifth iteration* of the course. I won't bother explaining how, but that's quite a bit of information from 12 alphanumeric characters.
 
 {% highlight r %}
 
