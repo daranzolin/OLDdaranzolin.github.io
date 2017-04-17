@@ -16,7 +16,7 @@ Here's a little demonstration.
 
 <!--more-->
 
-Let's first create a data frame of hypothetical section codes, end dates, and students:
+Let's create a data frame of hypothetical section codes, end dates, and students:
 
 {% highlight r %}
 
