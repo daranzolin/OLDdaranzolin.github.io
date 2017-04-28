@@ -11,7 +11,7 @@ the opportunity to outboast their colleagues in boasting about their colleagues.
 and thesaureses consulted. 
 
 While the review process on the whole was a charming experience, the sheer volume of submissions made the work somewhat tedious. Yes,
-each nomination required a human's careful persusal, but it wasn't long before I was imagining a more...programmatic approach. That
+each nomination required a human's careful perusal, but it wasn't long before I was imagining a more...programmatic approach. That
 meant R, and that meant `tidytext`.
 
 <!--more-->
