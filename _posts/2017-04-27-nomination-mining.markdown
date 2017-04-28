@@ -72,7 +72,7 @@ the file paths.
 
 Now the show begins. Below I: (1) build the `nominations_df` data frame; (2) calculate the number of nominations per employee,
 (3) unnest the words; (4) total the words, positive words, and calculate the positive word ratio and nomination score; and
-(5) order the data frame by nomination score. When this runs, we'll see our winner!
+(5) order the data frame by nomination score. When this runs, I'll see our winner!
 
 
 
@@ -109,7 +109,7 @@ the positive words used in the nominations of male vs. female employees? The dat
 just a playful, albeit lazy idea. 
 
 But far be it from me to deny the nominators and selection committee my full subjectivity and whatever measure of arbitrariness included. 
-Much better to read the submissions myself--sorry R.  
+Much better to read the submissions myself.  
 
 
 
