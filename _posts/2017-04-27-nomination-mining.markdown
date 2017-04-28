@@ -8,7 +8,9 @@ tags: R tidytext
 
 I recently had the privilege of reviewing internal award nominations. In a secret duel of persuasion, hundreds of employees seized 
 the opportunity to outboast their colleagues in boasting about their colleagues. Letterhead was prepared, anecdotes collected,
-and thesaureses consulted. 
+and thesaureses consulted.[^1]
+
+[^1]: I'm told the plural of "thesaurus" can also be "thesauri". 
 
 While the review process on the whole was a charming experience, the sheer volume of submissions made the work somewhat tedious. The word count ran into the tens of thousands. Each nomination required a human's careful perusal, but it wasn't long before I was imagining a more programmatic approach. That meant R, and that meant `tidytext`.
 
