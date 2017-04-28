@@ -16,7 +16,7 @@ meant R, and that meant `tidytext`.
 
 <!--more-->
 
-For reference, each submission looked like this:
+In brief, I had to read hundreds of nomination submissions. For reference, each looked like this:
 
 ***
 
