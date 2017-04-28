@@ -10,8 +10,6 @@ I recently had the privilege of reviewing internal award nominations. In a secre
 the opportunity to outboast their colleagues in boasting about their colleagues. Letterhead was prepared, anecdotes collected,
 and thesaureses consulted.[^1]
 
-[^1]: I'm told the plural of "thesaurus" can also be "thesauri". 
-
 While the review process on the whole was a charming experience, the sheer volume of submissions made the work somewhat tedious. The word count ran into the tens of thousands. Each nomination required a human's careful perusal, but it wasn't long before I was imagining a more programmatic approach. That meant R, and that meant `tidytext`.
 
 <!--more-->
@@ -114,6 +112,8 @@ just a playful, albeit lazy idea.
 
 But far be it from me to deny the nominators and selection committee my full subjectivity and whatever measure of arbitrariness included. 
 Much better to read the submissions myself.  
+
+[^1]: I'm told the plural of "thesaurus" can also be "thesauri".
 
 
 
