@@ -10,13 +10,11 @@ I recently had the privilege of reviewing internal award nominations. In a secre
 the opportunity to outboast their colleagues in boasting about their colleagues. Letterhead was prepared, anecdotes collected,
 and thesaureses consulted. 
 
-While the review process on the whole was a charming experience, the sheer volume of submissions made the work somewhat tedious. Yes,
-each nomination required a human's careful perusal, but it wasn't long before I was imagining a more...programmatic approach. That
-meant R, and that meant `tidytext`.
+While the review process on the whole was a charming experience, the sheer volume of submissions made the work somewhat tedious. The word count ran into the tens of thousands. Each nomination required a human's careful perusal, but it wasn't long before I was imagining a more programmatic approach. That meant R, and that meant `tidytext`.
 
 <!--more-->
 
-In brief, I had to read hundreds of nomination submissions. For reference, each looked like this:
+For reference, each looked like this:
 
 ***
 
