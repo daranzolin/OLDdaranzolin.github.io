@@ -104,6 +104,10 @@ nominations_df %>%
 
 {% endhighlight %}
 
+I wanted the nomination score formula to weigh number of submissions more heavily than total words. For example, I am more impressed by
+three people writing 100 words each than I am by one person writing 300 words. And while fraught with ambiguities, I like having the 
+positive word ratio as a coefficient of total words. Thus, this formula rewards nominees with multiple nominators who both wrote a lot and wrote positively.
+
 There are other, more interesting analyses to run: which positive words occur most? Is there an observable difference in 
 the positive words used in the nominations of male vs. female employees? The data is rich, but very much private. The above is
 just a playful, albeit lazy idea. 
