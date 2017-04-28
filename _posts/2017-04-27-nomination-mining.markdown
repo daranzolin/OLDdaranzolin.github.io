@@ -67,7 +67,7 @@ nom_names <- str_replace_all(nom_names, "\\/", "")
 
 {% endhighlight %}
 
-The desired text occurs after "Statement:", so I was only interested in the text after that point. `nom_names` is derived from
+The relevant text occurs after "Statement:", so I was only interested in the text after that point. `nom_names` is derived from
 the file paths. 
 
 Now the show begins. Below I: (1) build the `nominations_df` data frame; (2) calculate the number of nominations per employee,
