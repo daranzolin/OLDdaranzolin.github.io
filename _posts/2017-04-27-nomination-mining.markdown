@@ -14,7 +14,7 @@ While the review process on the whole was a charming experience, the sheer volum
 
 <!--more-->
 
-For reference, each looked like this:
+For reference, each submission looked like this:
 
 ***
 
