@@ -20,7 +20,7 @@ In brief, I had to read hundreds of nomination submissions. For reference, each 
 
 ***
 
-[metadata]
+[submission metadata]
 
 **Your First Name:** Lorum ipsum
 
