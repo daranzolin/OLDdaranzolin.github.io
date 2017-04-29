@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "'And the winner is...': Textmining Award Nominations"
+title:  "'And the winner is...' Textmining Award Nominations"
 date:   2017-04-27 21:27:02 -0700
 categories: Post
 tags: R tidytext
