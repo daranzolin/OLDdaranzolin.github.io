@@ -39,7 +39,9 @@ Pretty cool, right? Well, *How'd they do that?* The rOpenSci folks provide an ob
 > uses Hadley's colformats, specifically colformats::spark-bar()
 
 Thanks. Before we visit that repo, let's glance at the function used to produce the histograms. After some digging, I 
-found `inline_hist`:
+found `inline_hist`:[^1]
+
+[^1]: Special thanks to Maelle Salmon for pointing out the `lookup` package after this posted.
 
 ```
 inline_hist <- function(x) {
