@@ -7,7 +7,7 @@ tags: R
 ---
 
 This is the first post in a new series I'm calling *How'd they do that?* Motivated by professional curiosity 
-and personal jealousy, I will identify, expose, and interpret the secrets hidden within my fellow #rstats enthusiasts' repos.
+and personal jealousy, I will ~~identify, expose, and interpret~~ stumble through the secrets hidden within my fellow #rstats enthusiasts' repos.
 The exposition will not be exhaustive; curiosity is a fickle thing, burning one moment and extinguished the next. So it will be with these blogs. 
 
 First up: the console
