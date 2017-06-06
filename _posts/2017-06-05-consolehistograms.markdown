@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "*How'd they do that?* Part I: Console Histograms"
+title:  "How'd they do that? Part I: Console Histograms"
 date:   2017-06-05 21:27:02 -0700
 categories: Post
 tags: R 
