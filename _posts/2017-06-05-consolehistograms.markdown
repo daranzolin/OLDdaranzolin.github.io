@@ -29,6 +29,7 @@ histograms featured in `skimr`. Observe:
 11  carb numeric  hist ▆▇▂▁▇▁▁▁▁▁     0
 
 ```
+<!--more-->
 
 Pretty cool, right? Well, *How'd they do that?* The rOpenSci folks provide an obvious clue in the README:
 
