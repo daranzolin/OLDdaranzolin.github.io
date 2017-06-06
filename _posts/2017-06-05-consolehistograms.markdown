@@ -11,7 +11,7 @@ and personal jealousy, I will ~~identify, expose, and interpret~~ stumble throug
 The exposition will not be exhaustive; curiosity is a fickle thing, burning one moment and extinguished the next. So it will be with these blogs. 
 
 First up: the **console
-histograms** featured in `skimr`. Observe:
+histograms** featured in rOpenSci's `skimr`. Observe:
 
 ```
 > library(skimr)
