@@ -93,7 +93,7 @@ The `bars` object is most intriguing. Watch what happens when I recreate it in t
 
 ```
 
-`intToUtf8` converts UTF-8 encoded character vectors to and from integer vectors. I know very little about encoding, but I know that
+`intToUtf8` converts UTF-8 encoded character vectors to and from integer vectors. I know very little about encoding, but I do know that
 the "8" in UTF-8 means that 8 bits are used to represent a character. So in the example above, `vapply` 
 converts 9601 9602 9603 9604 9605 9606 9607 and 9608 to the blocks and then creates a character object.
 
