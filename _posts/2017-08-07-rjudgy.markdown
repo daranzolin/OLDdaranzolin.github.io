@@ -13,6 +13,8 @@ So it is with writing code. I have an R superego. You probably have an R supereg
 perhaps much like our western ethical norms, their validity is not always obvious. For example, I do not know why `match.call` is bad form or distasteful. I only know
 I was once scolded for using it on Reddit by one of our most authoritative authorities, and that I won't make that mistake again.  
 
+<!--more-->
+
 To further the codification and subsequent internalization of R norms, I've started to aggregate these "taboos" on my computer. Note that 
 these are unrelated to *actual* ethical issues like web scraping or biases in gender prediction models. Rather, 
 these innocuous malfeasances elicit--and merit--only gentle disdain. The list: 
