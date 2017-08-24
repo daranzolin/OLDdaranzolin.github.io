@@ -68,6 +68,8 @@ Let's sample an entry from the dictionary:
 
 ```
 
+The lesson, as always, never cross Apollo.
+
 In Part II, I'll jump into some fun ways to peruse the dictionary, but let's first see which Olympian has the most mentions (they are a vain lot):
 
 {% highlight r %}
