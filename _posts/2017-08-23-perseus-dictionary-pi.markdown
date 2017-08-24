@@ -31,7 +31,6 @@ the code from start to finish:
 
 library(rvest)
 library(tidyverse)
-library(rlist)
 
 entry_names <- read_html("http://cts.perseids.org/read/pdlrefwk/viaf88890045/003/perseus-eng1") %>%
   html_nodes(".col-md-1") %>%
@@ -41,7 +40,7 @@ entry_names <- read_html("http://cts.perseids.org/read/pdlrefwk/viaf88890045/003
 
 indices_list <- list()
 for (L in LETTERS) { 
-  l <- list.filter(entry_names, substr(., 1, 1) == L)
+  l <- keep(entry_names, substr(., 1, 1) == L)
   l_index <- paste(l[1], l[length(l)], sep = "-")
   indices_list <- append(indices_list, l_index)
 }
@@ -56,9 +55,6 @@ perseus_dictionary <- indices_list %>%
   rename(entry = text)
 
 {% endhighlight %}
-
-I think the `rlist` package gets somewhat forgotten in the `tidyverse`, but it has some nifty functionality. `rlist::list.filter`
-was the most intuitive way for me to filter the list how I wanted.
 
 Let's sample an entry from the dictionary:
 
