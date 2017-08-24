@@ -52,7 +52,7 @@ BASE_URL <- "http://cts.perseids.org/api/cts/?request=GetPassage&urn=urn:cts:pdl
 
 perseus_dictionary <- indices_list %>%
   map( ~ paste(BASE_URL, ., sep = ":")) %>%
-  map_df(extract_text) %>%
+  map_df(extract_text) %>% #extract_text is a utility function in rperseus. Cf https://github.com/daranzolin/rperseus/blob/master/R/utils.R
   rename(entry = text)
 
 {% endhighlight %}
