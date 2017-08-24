@@ -13,6 +13,8 @@ catastrophic loss of scholarship, maybe akin to us losing all of Wikipedia, the 
 High comedy. Black Adder must then rewrite the dictionary, proceeding linearly, alphabetically, and manually. For over 300 years, 
 this was how we used dictionaries. But with the advent of computing, we can now scour a dictionary much more creatively.
 
+<!--more-->
+
 In this post, I will show how I obtained *A Dictionary of Greek and Roman Biography and Mythology* William Smith, LLD, ed. 1890. It's
 an old dictionary, but it was the authoritative source of the Classical World for the Victorians. Whatever Jules Verne thought 
 of the Roman senate, he probably learned it here. And thanks to the heroes atthe Perseus Digital Library, every entry is available online.
