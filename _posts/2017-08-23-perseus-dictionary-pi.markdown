@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Perseus Dictionary, Part I"
-date:   2017-08-07 21:27:02 -0700
+date:   2017-08-23 21:27:02 -0700
 categories: Post
 tags: R 
 ---
