@@ -9,21 +9,20 @@ tags: R
 One of my favorite episodes of *Black Adder* is "Ink and Incapability". The plot is this: Samuel Johnson is 
 soliciting patronage from Prince George for his new book, the first ever English dictionary. But due to Black Adder's petty
 jealousy, Johnson's dictionary is instead burned through a hilarous turn of events. The burning of the dictionary represented a
-catastrophic loss of scholarship, maybe akin to us losing all of Wikipedia, the *Encylcopedia Brittanica,* and basketball-reference.com now. 
-High comedy. Black Adder must then rewrite the dictionary, proceeding linearly, alphabetically, and manually. For over 300 years, 
+catastrophic loss of scholarship, maybe akin to us losing all of Wikipedia, the *Encyclopedia Brittanica,* and basketball-reference.com now. Black Adder must then rewrite the dictionary, proceeding linearly, alphabetically, and manually. For over 300 years, 
 this was how we used dictionaries. But with the advent of computing, we can now scour a dictionary much more creatively.
 
 <!--more-->
 
-In this post, I will show how I obtained *A Dictionary of Greek and Roman Biography and Mythology* William Smith, LLD, ed. 1890. It's
+In this post, I will show how I obtained *A Dictionary of Greek and Roman Biography and Mythology* by William Smith, LLD, ed. 1890. It's
 an old dictionary, but it was the authoritative source of the Classical World for the Victorians. Whatever Jules Verne thought 
-of the Roman senate, he probably learned it here. And thanks to the heroes atthe Perseus Digital Library, every entry is available online.
+of the Roman senate, he probably learned it here. And thanks to the heroes at the Perseus Digital Library, every entry is available online.
 
 [Each entry is listed here.](http://cts.perseids.org/read/pdlrefwk/viaf88890045/003/perseus-eng1) There are over 19,000 of them,
 so we need to an efficient way to bring them into R. [Thanks to my previous work on rperseus,](https://github.com/daranzolin/rperseus) I have a pretty good idea of Perseus'
 API end points. I originally tried to pass the URN to `rperseus::get_perseus_text`, but only the 'A' entries were returned. We need them all.
 
-You can append an index range to any URN. This is how `get_perseus_text` works: (1) the function locates the stylized HTML page
+Via the API, you can append an index range to any URN. This is how `get_perseus_text` works: (1) the function locates the stylized HTML page
 with text ranges (e.g. 1.1-1.9); (2) scrapes the first and last indices; and (3) appends the range to an API call. If, however,
 you try ("A.abaeus_1-Z.zygia_1") only the 'A' entries are returned. So we will need a separate call for all the As, Bs, Cs, etc. Here's
 the code from start to finish:
