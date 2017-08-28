@@ -81,10 +81,9 @@ subject_network <- function(subject, personality_only = FALSE, include_personali
 {% endhighlight %}
 
 A brief explanation: the function `subject_network` first filters all entries containing a regex of the subject input. Stop words
-are removed, and the 30 top occurring entries. The function default is `include_personalities_only = TRUE, which indicates we 
+are removed, and the 30 top occurring entries. The function default is `include_personalities_only = TRUE`, which indicates we 
 only want to see the association between individuals (entries or "personalities" within the dictionary). 
-Otherwise, non-person associations will be returned (e.g. "book", "killed", etc.). A binary correlation is then calculated between
-the words, with the option of isolating correlations to subject. Then the correlation is plotted as a network.
+Otherwise, non-person associations will be returned (e.g. "book", "killed", etc.). A binary correlation is then calculated between the words, with the option of isolating correlations to subject. Then the correlation is plotted as a network.
 
 Some examples:
 
@@ -95,4 +94,29 @@ subject_network(subject = "Punic War")
 {% endhighlight %}
 
 ![useful image]({{ site.url }}/assets/Punic_war.png)
+
+Hannibal and Scipio, the two great generals of the Punic Wars, are in the center of the action. The network is built out
+by other important generals, consuls, and statesmen.
+
+{% highlight r %}
+
+subject_network(subject = "Athens")
+
+{% endhighlight %}
+
+![useful image]({{ site.url }}/assets/Athens.png)
+
+The Athens network is a role call of the great philosophers, lawmakers, generals, historians, and playwrights of the Classical Period.
+
+{% highlight r %}
+
+subject_network(subject = "Achilles")
+
+{% endhighlight %}
+
+![useful image]({{ site.url }}/assets/Achiles.png)
+
+By setting `center_subject = TRUE`, you can center the network on the given subject. Here Achilles is enmeshed with the gods and heroes from the Trojan War. 
+
+
 
