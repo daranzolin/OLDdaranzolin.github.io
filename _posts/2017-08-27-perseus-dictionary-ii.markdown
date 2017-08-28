@@ -94,5 +94,5 @@ subject_network(subject = "Punic War")
 
 {% endhighlight %}
 
-![](https://github.com/daranzolin/R_Projects/blob/master/literary_analysis/plots/negative_words_plot_Barchester%20Towers.png)
+![](daranzolin.github.io/img/Screen Shot 2017-03-23 at 5.56.39 PM.png)
 
