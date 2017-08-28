@@ -109,6 +109,8 @@ subject_network(subject = "Achilles")
 
 By setting `center_subject = TRUE`, you can center the network on the given subject. Here Achilles is enmeshed with the gods and heroes from the Trojan War. **Cumulative Effect:** None. Achilles was an A-list celeb among gods and humans.
 
+The code in this post owes much to [David Robinson's fascinating work on the Stack Overflow surveys.](http://varianceexplained.org/r/stacksurveyr/)
+
 
 
 
