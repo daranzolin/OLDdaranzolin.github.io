@@ -94,5 +94,5 @@ subject_network(subject = "Punic War")
 
 {% endhighlight %}
 
-![useful image]({{ site.url }}/assets/imgweb.png)
+![useful image]({{ site.url }}/assets/Punic_war.png)
 
