@@ -94,5 +94,5 @@ subject_network(subject = "Punic War")
 
 {% endhighlight %}
 
-![](https://photos.google.com/share/AF1QipO_75wO-TPBMe7wPLBlEENeFSXJAfbWt68AyFpWcgF1ccGkAbZCOSc-bSPT7NOkag?key=ZmJLc1lPYzNWdVZHWWt0bHVnNE1EX2NWZjdVNVZn)
+![](daranzolin.github.io/assets/imgweb.png)
 
