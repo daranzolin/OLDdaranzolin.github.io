@@ -34,7 +34,7 @@ perseus_dictionary <- perseus_dictionary %>%
   dplyr::rowwise() %>% 
   dplyr::mutate(entry_name = stringr::str_replace(stringr::str_split(entry, " ")[[1]][1], "'", ""))
 
-subject_network <- function(subject, center_entry = FALSE) {
+subject_network <- function(subject, center_subject = FALSE) {
   
   subject_words <- perseus_dictionary %>%
     dplyr::filter(str_detect(entry, regex(subject, ignore_case = TRUE))) %>% 
@@ -55,7 +55,7 @@ subject_network <- function(subject, center_entry = FALSE) {
   subject_words_cor <- subject_words %>%
     pairwise_cor(entry_name, word)
   
-  if (center_entry) {
+  if (center_subject) {
     subject_words_cor <- subject_words_cor %>% 
       dplyr::filter(item2 == subject)
   }
@@ -101,7 +101,7 @@ The Athens network is a role call of the great philosophers, heroes, lawmakers, 
 
 {% highlight r %}
 
-subject_network(subject = "Achilles")
+subject_network(subject = "Achilles", center_subject = TRUE)
 
 {% endhighlight %}
 
