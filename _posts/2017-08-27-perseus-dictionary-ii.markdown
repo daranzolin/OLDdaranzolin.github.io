@@ -94,5 +94,5 @@ subject_network(subject = "Punic War")
 
 {% endhighlight %}
 
-![](daranzolin.github.io/img/Screen Shot 2017-03-23 at 5.56.39 PM.png)
+![](daranzolin.github.io/img/imgforweb.png)
 
