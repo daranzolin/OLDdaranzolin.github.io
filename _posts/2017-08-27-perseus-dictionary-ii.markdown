@@ -34,7 +34,7 @@ perseus_dictionary <- perseus_dictionary %>%
   dplyr::rowwise() %>% 
   dplyr::mutate(entry_name = stringr::str_replace(stringr::str_split(entry, " ")[[1]][1], "'", ""))
 
-subject_network <- function(subject, personality_only = FALSE, include_personalities_only = TRUE) {
+subject_network <- function(subject, center_entry = FALSE) {
   
   subject_words <- perseus_dictionary %>%
     dplyr::filter(str_detect(entry, regex(subject, ignore_case = TRUE))) %>% 
@@ -45,29 +45,23 @@ subject_network <- function(subject, personality_only = FALSE, include_personali
   top_entries <- subject_words %>% 
     filter(word %in% entry_name) %>% 
     count(word) %>% 
-    top_n(30, n) %>% 
+    top_n(25, n) %>% 
     pull(word)
-  
-  if (include_personalities_only) {
-    subject_words <- subject_words %>% 
-      dplyr::filter(str_to_title(word) != str_to_title(entry_name),
-             str_to_title(word) %in% str_to_title(entry_name))
-  }
   
   subject_words <- subject_words %>% 
     filter(entry_name %in% top_entries,
            word %in% top_entries)
   
   subject_words_cor <- subject_words %>%
-    pairwise_cor(entry_name, word) 
+    pairwise_cor(entry_name, word)
   
-  if (personality_only) {
+  if (center_entry) {
     subject_words_cor <- subject_words_cor %>% 
-      dplyr::filter(item2 == "Athena")
+      dplyr::filter(item2 == subject)
   }
   
   g <- subject_words_cor %>%
-    top_n(40, correlation) %>% 
+    top_n(100, correlation) %>% 
     filter(correlation > 0) %>% 
     graph_from_data_frame() %>%
     ggraph(layout = "fr") +
@@ -80,10 +74,7 @@ subject_network <- function(subject, personality_only = FALSE, include_personali
 
 {% endhighlight %}
 
-A brief explanation: the function `subject_network` first filters all entries containing a regex of the subject input. Stop words
-are removed, and the 30 top occurring entries. The function default is `include_personalities_only = TRUE`, which indicates we 
-only want to see the association between individuals (entries or "personalities" within the dictionary). 
-Otherwise, non-person associations will be returned (e.g. "book", "killed", etc.). A binary correlation is then calculated between the words, with the option of isolating correlations to subject. Then the correlation is plotted as a network.
+A brief explanation: the function `subject_network` first filters all entries containing a regex of the subject input. Stop words are removed, and the 25 top occurring entries. A binary correlation is then calculated between the words, with the option of isolating correlations to subject. Then the correlation is plotted as a network.
 
 Some examples:
 
@@ -117,6 +108,8 @@ subject_network(subject = "Achilles")
 ![useful image]({{ site.url }}/assets/Achiles.png)
 
 By setting `center_subject = TRUE`, you can center the network on the given subject. Here Achilles is enmeshed with the gods and heroes from the Trojan War. 
+
+
 
 
 
