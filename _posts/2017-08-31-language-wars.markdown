@@ -9,6 +9,8 @@ tags: R
 Hot take: the language "wars" are helpful. It's surprising that the #rstats community, so attentive to the needs of 
 beginners misses this.
 
+<!--more-->
+
 *Bellum omnium contra omnes.* A liberal paraphrase: "human existence is war". So wrote Thomas Hobbes in his *Leviathan,* 
 a work studied in any introduction to philosophy or political thought. While Hobbes broader point is about government, I'm
 more interested in *epistemology.* For humans, "war" is a useful framework. Consider how martial language permeates our every day speech:
