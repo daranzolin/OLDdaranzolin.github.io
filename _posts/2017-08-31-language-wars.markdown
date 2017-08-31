@@ -13,7 +13,7 @@ beginners misses this.
 
 *Bellum omnium contra omnes.* A liberal paraphrase: "human existence is war". So wrote Thomas Hobbes in his *Leviathan,* 
 a work studied in any introduction to philosophy or political thought. While Hobbes' broader point is about government, I'm
-more interested in *epistemology.* For humans, "war" is a useful framework. Consider how martial language permeates our everyday speech:
+more interested in *epistemology.* For humans, "war" is a useful framework. Consider how martial language permeates our vernacular:
 
 * "I'll *ping* them again next week."
 * "So-and-so *marshalled* an argument."
