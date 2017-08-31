@@ -39,6 +39,6 @@ In sum: yes, war content is helpful, but yea, it might not be the healthiest. It
 as a novice trying to find my footing, I figured out that I wanted to join the #rstats side. And three years later I get to write code 
 for work and for play, and thats in some part thanks to the war. 
 
-[^1]: This is not true of influential tool-makers like Hadley, Bob, Rudis, Wes Mckinney, and Jake VanderPlas. In fact, it's not even true of most people.
+[^1]: This is not true of influential tool-makers like Hadley, Bob Rudis, Wes Mckinney, and Jake VanderPlas. In fact, it's not even true of most people.
 
 
