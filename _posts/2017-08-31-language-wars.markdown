@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Language Wars are Good"
-date:   2017-08-27 21:27:02 -0700
+date:   2017-08-31 14:27:02 -0700
 categories: Post
 tags: R 
 ---
