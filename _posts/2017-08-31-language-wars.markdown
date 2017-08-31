@@ -23,7 +23,7 @@ more interested in *epistemology.* For humans, "war" is a useful framework. Cons
 * "The project was a *dud.*"
 
 Each of these borrows from the realities of war. It's almost impossible to narrate or describe an exchange of *conflicting* 
-ideas without the war framework. "War" is how humans create meaning and understanding.
+ideas without the war framework. "War" is how humans create meaning and understanding. War is pedagogy.
 
 What does this have to do with the so-called "programming wars"? Take R vs. Python. By my lights, disparaging the partisans of this "war" 
 has become a badge of elitist self-congratulation, a boast that the person has transcended the earthy, absurd, and childish
