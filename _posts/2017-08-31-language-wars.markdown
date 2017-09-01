@@ -31,7 +31,7 @@ has become a badge of elitist self-congratulation, a boast that the person has t
 
 Here's the problem: the anti-war chorus downvotes and shames the creators of any "R vs. Python" content. And guess what?
 That stuff is really helpful for beginners! It was certainly helpful to me. Like most new programmers, I arrived with a full-time job
-and zero computer science background. When I typed `print("Hello World!")` I half-expected it print to my actual printer. Without simplistic infographics and blogs like "Here's how/why R is better" or "Here's why
+and zero computer science background. When I first typed `print("Hello World!")` I half-expected it print to my actual printer. Without simplistic infographics and blogs like "Here's how/why R is better" or "Here's why
 Python is better for this", I would never have found a place to jump in and *start learning.* I didn't have the time or knowledge
 for subtlety--*I needed war.* The war makes the content accessible; the war shamers do not.
 
