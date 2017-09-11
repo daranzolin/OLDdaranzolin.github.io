@@ -21,6 +21,7 @@ more interested in *epistemology.* For humans, "war" is a useful framework. Cons
 * "I've been in their *crosshairs* all week."
 * "The news was a *bombshell.*"
 * "The project was a *dud.*"
+* "He *stuck to his guns.*"
 
 Each of these borrows from the realities of war. It's almost impossible to narrate or describe an exchange of *conflicting* 
 ideas without the war framework. "War" is how humans create meaning and understanding. War is pedagogy.
