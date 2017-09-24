@@ -41,7 +41,7 @@ Or you want to see it in Spanish?
 
 
 ```
-ggtextparallel(16, version = "grc")
+ggtextparallel(16, version = "spa-RVR1960")
 
 ```
 
