@@ -11,6 +11,8 @@ and other proprietary software. Somewhere on the internet Hadley Wickham advises
 Within that framework, the problem is about [about](https://www.amazon.com/Gospel-Parallels-Comparison-Synoptic-Standard/dp/0840774842) [$70](https://www.amazon.com/Synopsis-Quattuor-Evangeliorum-Bible-Students/dp/3438051303) 
 (plus shipping and handling) and the solution is `devtools::install_github("daranzolin/ggtextparllels")`. 
 
+<!--more-->
+
 `ggtextparallels` sports two functions: `ggtextparllel` and `gglangparellel`. The former plots passages across *gospels* and 
 the latter plots passages across *versions.* A brief demonstration is below.
 
