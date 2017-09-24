@@ -17,8 +17,7 @@ Within that framework, the problem is about [about](https://www.amazon.com/Gospe
 the latter plots passages across *versions.* A brief demonstration is below.
 
 The gospels are fascinating for a million reasons, but their intertextuality has captivated readers for almost 2000 years. 
-Did Matthew and Luke use Mark? Why does Matthew and Luke have stories that Mark doesn't? Why is John so different? These are questions
-without firm answers. But we can better understand the differences and similarities by viewing the texts alongside each other.
+Did Matthew and Luke use Mark? Why does Matthew and Luke have stories that Mark doesn't? Why is John so different? These are questions without firm answers. But we can better understand the differences and similarities by viewing the texts alongside each other. With a few APIs and the brilliance of `ggplot2`, creating such a tool is a snap.
 
 Note the differences in John the Baptist's Messianic preaching:
 
