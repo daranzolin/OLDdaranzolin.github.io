@@ -8,7 +8,7 @@ tags: R
 
 The purpose of this post is to introduce `ggtextparallels`, a tool for ~~cheap~~ frugal biblical scholars who don't want to pay for books
 and other proprietary software. Somewhere on the internet Hadley Wickham advises new R developers to find problems and then try and solve them. 
-Within that framework, the problem is about [about](https://www.amazon.com/Gospel-Parallels-Comparison-Synoptic-Standard/dp/0840774842) [$70](https://www.amazon.com/Synopsis-Quattuor-Evangeliorum-Bible-Students/dp/3438051303) 
+Within that framework, the problem is [about](https://www.amazon.com/Gospel-Parallels-Comparison-Synoptic-Standard/dp/0840774842) [$70](https://www.amazon.com/Synopsis-Quattuor-Evangeliorum-Bible-Students/dp/3438051303) 
 (plus shipping and handling) and the solution is `devtools::install_github("daranzolin/ggtextparllels")`. 
 
 <!--more-->
