@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "I am a tidyverse Enthusiast"
-date:   2017-09-23 20:15:02 -0700
+date:   2017-10-01 20:15:02 -0700
 categories: Post
 tags: R UNIX bash
 ---
