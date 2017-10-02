@@ -7,7 +7,7 @@ tags: R UNIX bash
 ---
 
 I am a tidyverse enthusiast. The proof is in the pudding: of my six packages on GitHub, only one DESCRIPTION 
-contains a non-tidyverse package (`rcicero`, `jsonlite`). I once contemplated rewriting these packages sans the tidyverse--for science, learning, growth, 
+contains a non-tidyverse package (`rcicero`, `tidyjson`). I once contemplated rewriting these packages sans the tidyverse--for science, learning, growth, 
 bragging rights, and character building--but I broke into a cold sweat once I typed `plot`. Admittedly, my reliance 
 on the tidyverse might be considered a crutch. Do I *really* know R, or just the conventions of a popular subset? A different question
 for a different time.
