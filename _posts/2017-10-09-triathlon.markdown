@@ -45,7 +45,7 @@ tri %<>%
 
 Now, some questions:
 
-### What percentile was my time? (132 minutes)
+**What percentile was my time? (132 minutes)**
 
 ```
 > round(pnorm(132, mean = mean(tri$minutes), sd = sd(tri$minutes), lower.tail = FALSE) * 100)
@@ -73,17 +73,17 @@ ggplot(tri, aes(minutes)) +
 
 Bonus: Age distribution
 
-![useful image]({{ site.url }}/assets/Trihist.png)
+![useful image]({{ site.url }}/assets/Triage.png)
 
 
-### Is there a correlation between age and finish time?
+**Is there a correlation between age and finish time?**
 
 The resounding 'No!' was cool to see.
 
 
 ![useful image]({{ site.url }}/assets/Triscatplot.png)
 
-### What was the distribution by gender?
+**What was the distribution by gender?**
 
 
 ![useful image]({{ site.url }}/assets/Tribox.png)
