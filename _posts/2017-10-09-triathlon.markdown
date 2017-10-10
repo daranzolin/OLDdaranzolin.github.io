@@ -13,6 +13,8 @@ septuagenarians. But *how* poor? I needed data.
 
 [^1]: But not by the guy on a BMX.
 
+<!--more-->
+
 [TBF Racing](http://totalbodyfitness.com/site/) did not disappoint--within hours the results were online. A few lines of web scraping later, 
 and the data was mine:
 
