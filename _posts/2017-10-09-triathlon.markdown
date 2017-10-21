@@ -107,7 +107,7 @@ The resounding 'No!' was cool to see.
 
 Better than me.
 
-![useful image]({{ site.url }}/assets/familyrace.png)
+![useful image]({{ site.url }}/assets/Familyraceshades.png)
 
 Some summary statistics:
 
