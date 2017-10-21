@@ -32,16 +32,46 @@ tri <- url %>%
   html_table() %>%
   .[[1]]
 
+h1 <- names(tri)
+h2 <- unlist(tri[1,])
+header <- c()
+for (i in seq_along(h2)) {
+  if (h2[i] != "") {
+    header[i] <- paste(h1[i], h2[i], collapse = " ")
+  } else {
+    header[i] <- h1[i]
+  }
+}
+tri <- tri[-1,]
+names(tri) <- header
+
 convert_mins <- function(x) {
   ch <- times(x)
   60 * hours(ch) + minutes(ch)
 }
-
 tri %<>%
-  mutate(minutes = convert_mins(`Finish Time`))
-
+  mutate_at(vars(contains("Time")), convert_mins) %>% 
+  janitor::clean_names() %>% 
+  mutate(end_swim_mins = swim_time,
+         end_bike_mins = swim_time + t1_bike_t2_time,
+         end_bike_rank = dense_rank(end_bike_mins),
+         start_mins = 0) 
 
 {% endhighlight %}
+
+I then converted the times to minutes and created some cumulative `end_*_mins` variables.
+
+A glance at the data:
+
+| rank| bib|name                | age|gender | swim_time|swim_rank | t1_bike_t2_time|t1_bike_t2_rank | run_time|run_rank | finish_time|
+|----:|---:|:-------------------|---:|:------|---------:|:---------|---------------:|:---------------|--------:|:--------|-----------:|
+|    1| 324|Peter Mendes        |  43|M      |        14|4         |              41|1               |       18|2        |          74|
+|    2| 142|Travis Lantz        |  36|M      |        12|1         |              42|3               |       19|8        |          75|
+|    3| 134|Jeremy Dylan Kalmus |  28|M      |        13|3         |              43|5               |       18|3        |          75|
+|    4| 278|Greg Watkins        |  54|M      |        14|5         |              43|4               |       20|11       |          78|
+|    5| 121|Cristobal Heitmann  |  31|M      |        15|16        |              44|8               |       19|6        |          79|
+|    6| 310|Brian Leighton      |  56|M      |        14|9         |              42|2               |       22|36       |          80|
+
 
 Now, some questions:
 
@@ -53,33 +83,16 @@ Now, some questions:
 
 ```
 
-Yeesh. It doesn't look any better on a histogram:
-
-{% highlight r %}
-
-ggplot(tri, aes(minutes)) +
-  geom_histogram(fill = "lightgreen", color = "black") +
-  geom_vline(xintercept = 132, color = "red", linetype = "dashed") +
-  labs(x = "",
-       y = "",
-       title = "The 2017 TBF Racing Sprint Triathlon",
-       subtitle = "Race Minutes, Reversed") +
-  scale_x_reverse() +
-  theme_minimal()
-  
-{% endhighlight %}
+Yeesh. It doesn't look any better on a histogram or broken down by stage:
 
 ![useful image]({{ site.url }}/assets/Trihist.png)
 
-Bonus: Age distribution
-
-![useful image]({{ site.url }}/assets/Triage.png)
+![useful image]({{ site.url }}/assets/stageshist.png)
 
 
 **Is there a correlation between age and finish time?**
 
 The resounding 'No!' was cool to see.
-
 
 ![useful image]({{ site.url }}/assets/Triscatplot.png)
 
@@ -88,30 +101,24 @@ The resounding 'No!' was cool to see.
 
 ![useful image]({{ site.url }}/assets/Tribox.png)
 
+![useful image]({{ site.url }}/assets/stageboxes.png)
+
+**How did the Neufelds, my racing companions, fare?**
+
+![useful image]({{ site.url }}/assets/familyrace.png)
+
 Some summary statistics:
 
+|gender | mean_minutes_to_finish| sd_minutes| median_minutes| best| average_age|
+|:------|----------------------:|----------:|--------------:|----:|-----------:|
+|F      |               118.7636|   17.35892|            117|   84|          37|
+|M      |               106.6071|   18.64382|            104|   74|          43|
 
-{% highlight r %}
 
-tri %>% 
-  group_by(Gender) %>% 
-  summarize(mean_minutes_to_finish = mean(minutes),
-            sd_minutes = sd(minutes),
-            median_minutes = median(minutes),
-            best = min(minutes))
+Bonus: Age distribution
 
-{% endhighlight %}
+![useful image]({{ site.url }}/assets/Triage.png)
 
-```
-# A tibble: 2 x 5
-  Gender mean_minutes_to_finish sd_minutes median_minutes  best
-   <chr>                  <dbl>      <dbl>          <dbl> <dbl>
-1      F               118.7636   17.35892            117    84
-2      M               106.7521   18.76530            104    74
-
-```
-
-Would I do it again? Maybe.
 
 
 
