@@ -105,6 +105,8 @@ The resounding 'No!' was cool to see.
 
 **How did the Neufelds, my racing companions, fare?**
 
+Better than me.
+
 ![useful image]({{ site.url }}/assets/familyrace.png)
 
 Some summary statistics:
