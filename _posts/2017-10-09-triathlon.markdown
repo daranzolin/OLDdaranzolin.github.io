@@ -34,6 +34,7 @@ tri <- url %>%
 
 h1 <- names(tri)
 h2 <- unlist(tri[1,])
+h2[is.na(h2)] <- ""
 header <- c()
 for (i in seq_along(h2)) {
   if (h2[i] != "") {
