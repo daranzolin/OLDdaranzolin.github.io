@@ -110,6 +110,10 @@ Better than me.
 
 ![useful image]({{ site.url }}/assets/Familyraceshades.png)
 
+With emojis!
+
+![useful image]({{ site.url }}/assets/raceemojis.png)
+
 Some summary statistics:
 
 |gender | mean_minutes_to_finish| sd_minutes| median_minutes| best| average_age|
