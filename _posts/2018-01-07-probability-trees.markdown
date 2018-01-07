@@ -152,8 +152,6 @@ The probability of having (prior) after testing positive is 0.068
 
 ![useful image]({{ site.url }}/assets/ptree1.png)
 
-The message produced follows Bayes Theorum: 
-
-![](https://qph.ec.quoracdn.net/main-qimg-003a7aaa0935215238a082f0412fb564)
+The message produced follows Bayes Theorum: the probability of A, given B, is the probability of A and B divided by the probability of B. 
 
 I'm not sure how or if these simple statistical tasks could be expanded into a package, but I think it's worth considering.
