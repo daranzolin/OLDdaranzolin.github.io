@@ -145,7 +145,7 @@ The function renders the tree and returns it invisibly for further edits. For ex
 the *sensitivity* of the test (true positive) at 0.95, and the *specificity* of the test (true negative) at 0.98. 
 
 ```
-> bayes_probability_tree(0.07, 0.95, 0.98)
+> bayes_probability_tree(prior = 0.07, true_positive = 0.95, true_negative = 0.98)
 The probability of having (prior) after testing positive is 0.068
 
 ```
