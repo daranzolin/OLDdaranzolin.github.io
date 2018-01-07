@@ -29,6 +29,8 @@ that I test positive?*
 
 {% highlight r %}
 
+library(DiagrammeR)
+
 bayes_probability_tree <- function(prior, true_positive, true_negative) {
   
   if (!all(c(prior, true_positive, true_negative) > 0) && !all(c(prior, true_positive, true_negative) < 1)) {
