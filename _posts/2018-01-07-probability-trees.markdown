@@ -48,7 +48,7 @@ bayes_probability_tree <- function(prior, true_positive, true_negative) {
   b3 <- round4(c_prior * c_tn)
   b4 <- round4(c_prior * true_negative)
   
-  bp <-  round4(b1/(b1 + b4))
+  bp <-  round4(b1/(b1 + b3))
   
   labs <- c("X", prior, c_prior, true_positive, c_tp, true_negative, c_tn, b1, b2, b4, b3)
   
@@ -146,12 +146,12 @@ the *sensitivity* of the test (true positive) at 0.95, and the *specificity* of 
 
 ```
 > bayes_probability_tree(prior = 0.07, true_positive = 0.95, true_negative = 0.98)
-The probability of having (prior) after testing positive is 0.068
+The probability of having (prior) after testing positive is 0.7814
 
 ```
 
 ![useful image]({{ site.url }}/assets/ptree1.png)
 
-The message produced follows Bayes Theorum: the probability of A, given B, is the probability of A and B divided by the probability of B. 
+The message produced follows Bayes Theorum: the probability of A, given B, is the probability of A and B divided by the probability of B. Thus, there is a 78% chance that someone has X, given that they tested positive.
 
 I'm not sure how or if these simple statistical tasks could be expanded into a package, but I think it's worth considering.
