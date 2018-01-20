@@ -101,7 +101,7 @@ p1 + p2
 
 {% endhighlight %}
 
-![useful image]({{ site.url }}/assets/visdat1.png)
+![useful image]({{ site.url }}/assets/visdats1.png)
 
 ### What can I do with this?
 
