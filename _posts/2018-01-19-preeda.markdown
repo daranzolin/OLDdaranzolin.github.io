@@ -5,7 +5,7 @@ date:   2018-01-19 18:15:02 -0700
 categories: Post
 tags: R
 ---
-This post is about pre-exploratory data analysis. Namely, answering questions about the data before you know anything about the data. There are roughly three overlapping questions to ask:
+This post is about pre-exploratory data analysis. Namely, answering questions about the data at two junctures: before you know anything about the data and when you know only very little about the data. There are roughly three overlapping questions to ask:
   
   1. What is this?
   2. What's in this?
@@ -18,12 +18,11 @@ I toyed with three poetic conceits for the post. I first tried to pair Antonio M
 and a scolding by a native speaker who disputed my interpretation, I abandoned the connection. Second, 
 I tried to shoehorn "The Road Not Taken" by Robert Frost into a narrative about exploratory data analysis. But the association collapses
 in the first stanza: data analysts *can* travel both roads; there is no one way to do this thing. Finally, I arrived
-where I should have started, with Tolkien's majestic "All That is Gold Does Not Glitter". Like Aragorn, the true King of Gondor, 
-with the blood of Numenor coursing through his veins, data analysts may wander but are not lost. This post is for data analysts ready to wander over their data.
+where I should have started, with Tolkien's majestic "All That is Gold Does Not Glitter". Like Aragorn, the true King of Gondor, data analysts may wander but are not lost. This post is for data analysts ready to wander over their data (with R).
 
 [^1]: "...wanderer, there is no road, you make the road by walking"
 
-For the remainder of this post, I'll be wandering through some [suspension data from my rCAEDDATA package.](https://github.com/daranzolin/rCAEDDATA) The data set includes suspension counts, cumulative enrollment, 
+For the remainder of this post, I'll be wandering through [suspension data from my rCAEDDATA package.](https://github.com/daranzolin/rCAEDDATA) The data set includes suspension counts, cumulative enrollment, 
 and suspension rate data from the California Department of Education.
 
 {% highlight r %}
@@ -62,7 +61,7 @@ View(supsensions)
 ![useful image]({{ site.url }}/assets/view.png)
 
 `View` helps me visualize future transformations as data gets sliced, sorted, grouped, and gathered. It's like a map my
-mind can wander over as I consider variations and covariations within the data.
+mind can move over as I consider variations and covariations within the data.
 
 
 {% highlight r %}
@@ -117,9 +116,7 @@ p1 + p2
 ### What can I do with this?
 
 With a lay of the land, the wanderer analyst is now ready to start asking questions. Are drugs-related suspensions increasing or decreasing? In what
-counties, districts, or schools are there the least suspensions? Numerous charts and maps might be springing into your head.
-
-Let's make some charts and amap before finishing up. As noted above, the data is not tidy, so a few transformations are in order. I've decided to 
+counties, districts, or schools are there the least suspensions? Numerous charts and maps might be springing into your head, so let's make some. As noted above, the data is not tidy, so a few transformations are required. I've decided to 
 focus on county-level data, which correpsonds to the "O" aggregate level:
 
 {% highlight r %}
@@ -151,7 +148,7 @@ A violation of any assertion would throw an error.
 
 ### EDA Visualizations
 
-Now we can make some plots. Here's the various suspensions over time:
+To the plots! Here's the various suspensions over time:
 
 {% highlight r %}
 
