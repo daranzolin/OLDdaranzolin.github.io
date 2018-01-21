@@ -5,8 +5,7 @@ date:   2018-01-19 18:15:02 -0700
 categories: Post
 tags: R
 ---
-This post is about pre-exploratory data analysis. Namely, answering questions about the data before you know anything about the data.
-There are roughly three overlapping questions to ask:
+This post is about pre-exploratory data analysis. Namely, answering questions about the data before you know anything about the data. There are roughly three overlapping questions to ask:
   
   1. What is this?
   2. What's in this?
@@ -22,6 +21,8 @@ in the first stanza: data analysts *can* travel both roads; there is no one way 
 where I should have started, with Tolkien's majestic "All That is Gold Does Not Glitter". Like Aragorn, the true King of Gondor, 
 with the blood of Numenor coursing through his veins, data analysts may wander but are not lost. This post is for data analysts ready to wander over their data.
 
+[^1]: "...wanderer, there is no road, you make the road by walking"
+
 For the remainder of this post, I'll be wandering through some [suspension data from my rCAEDDATA package.](https://github.com/daranzolin/rCAEDDATA) The data set includes suspension counts, cumulative enrollment, 
 and suspension rate data from the California Department of Education.
 
@@ -35,7 +36,7 @@ data("suspensions")
 
 ## What is this?
 
-So we have some data. What is it? If you're not sure, use the `class` function:
+We have some data. What is it? If you're not sure, use the `class` function:
 
 {% highlight r %}
 
@@ -47,19 +48,30 @@ class(suspensions)
 [1] "tbl_df"     "tbl"        "data.frame"
 ```
 
-If it's a data frame, we're in good shape. Parsing lists, JSON, XML, or other objects into tables takes time and effort.   
+Since it's a data frame, we're in good shape. Parsing lists, JSON, XML, or other objects into tables takes time and effort and
+is far beyond the scope of this post.
+
 There are several functions commonly used to inspect objects, but my first two are always `glimpse` and `View`.
 
 {% highlight r %}
 
 View(supsensions)
-glimpse(suspensions)
 
 {% endhighlight %}
 
 ![useful image]({{ site.url }}/assets/view.png)
 
+`View` helps me visualize future transformations as data gets sliced, sorted, grouped, and gathered. It's like a map my
+mind can wander over as I consider variations and covariations within the data.
+
+
+{% highlight r %}
+
+glimpse(suspensions)
+
+{% endhighlight %}
 ```
+
 Observations: 293,064
 Variables: 15
 $ AGGEGATELEVEL         <chr> "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O...
@@ -79,8 +91,7 @@ $ DATECREATED           <chr> "12/21/2015 12:00:00 AM", "12/21/2015 12:00:00 AM"
 $ DATEUPDATED           <chr> "12/21/2015 12:00:00 AM", "12/21/2015 12:00:00 AM", "12/21/2015 12:00:00 AM", "12/21/2015 12:00:00 AM", "12...
 ```
 
-`View` helps me visualize future transformations as data gets sliced, sorted, grouped, and gathered. `glimpse` gives me a snapshot
-of the variable names, types, and the first few values. Here are three initial obervations:
+`glimpse` gives me a snapshot of the variable names, types, and the first few values. Here are three initial obervations:
 
 1. I'll need to consult the DoE's codebook to identify the various `AGGREGATELEVEL` and `DISCIPLINETYPE`. 
 2. If I want to work with the `DATECREATED` and `DATEUPDATED` variables, I'll have to work those columns into proper dates.
@@ -89,7 +100,7 @@ of the variable names, types, and the first few values. Here are three initial o
 ### What's in this?
 
 Another tool used by experienced wanderers is the `visdat` package. `visdat` helps us "see" the data in color by 
-displaying the variable classes and missing values in a data frame as plots. 
+displaying the variable classes and missing values in a data frame as plots. If `View` offers a map of the topography, `glimpse` provides a map of the climate. 
 
 {% highlight r %}
 
@@ -105,10 +116,10 @@ p1 + p2
 
 ### What can I do with this?
 
-The wanderer analyst is now ready to start asking questions. Are drugs-related suspensions increasing or decreasing? In what
+With a lay of the land, the wanderer analyst is now ready to start asking questions. Are drugs-related suspensions increasing or decreasing? In what
 counties, districts, or schools are there the least suspensions? Numerous charts and maps might be springing into your head.
 
-Let's make a chart and a map before finishing up. As noted above, the data is not tidy, so a few transformations are in order. I've decided to 
+Let's make some charts and amap before finishing up. As noted above, the data is not tidy, so a few transformations are in order. I've decided to 
 focus on county-level data, which correpsonds to the "O" aggregate level:
 
 {% highlight r %}
@@ -121,7 +132,26 @@ county_data <- suspensions %>%
 
 {% endhighlight %}
 
-Now we can plot the various suspension reasons over time:
+### Interlude: assertr
+
+`assertr` is another important EDA tool. The package includes functions designed to verify assumptions about data. In the example below, I'm confirming that (1) Santa Clara, Alameda, and San Francisco counties appear in the data set; (2) no row has more than 1 NA; and (3) each row is unique. These functions are helpful when you have rigid expectations and requirements the data must satisfy.  
+
+{% highlight r %}
+
+invisible(
+  county_data %>% 
+    verify(c("Alameda", "Santa Clara", "San Francisco") %in% .$name) %>% 
+    assert_rows(num_row_NAs, within_bounds(0,1), everything()) %>%
+    assert_rows(col_concat, is_uniq, everything())
+)
+  
+{% endhighlight %}
+
+A violation of any assertion would throw an error.
+
+### EDA Visualizations
+
+Now we can make some plots. Here's the various suspensions over time:
 
 {% highlight r %}
 
@@ -145,6 +175,54 @@ county_data %>%
 ![useful image]({{ site.url }}/assets/suspensions.png)
 
 Observed: supensions marked "other defiance" have dropped dramatically. 
+
+***
+
+While bar plots via `ggplot2` are the speediest way to compare suspensions by county, I've been looking for an excuse 
+to make waffle plots via the `waffle` package:
+
+{% highlight r %}
+
+library(waffle)
+
+prepare_waffle_data <- function(county) {
+  unlist(
+    filter(county_data, name == county, suspension_reason != "TOTAL") %>% 
+    group_by(suspension_reason) %>% 
+    summarize(suspensions = sum(suspensions)) %>% 
+    ungroup() %>% 
+    select(suspension_reason, suspensions) %>% 
+    spread(suspension_reason, suspensions) 
+  )
+}
+
+iron(
+  waffle(prepare_waffle_data("El Dorado")/100, 
+         rows = 5,
+         legend_pos="none",
+         size = 0.4,
+         pad = 3,
+         title = "El Dorado"),
+  waffle(prepare_waffle_data("Mendocino")/100, 
+         rows = 5,
+         legend_pos="none",
+         size = 0.4,
+         pad = 3,
+         title = "Mendocino"),
+  waffle(prepare_waffle_data("Yuba")/100, 
+       rows = 5,
+       legend_pos="bottom",
+       size = 0.4,
+       pad = 3,
+       title = "Yuba",
+       xlab = "1 square = 100 students")
+)
+
+{% endhighlight %}
+
+![useful image]({{ site.url }}/assets/waffle.png)
+
+Observed: El Dorado has had more drugs-related suspensions, Mendocino has had more violence-with-injury suspensions, and Yuba has had more violence-without-injury suspensions. 
 
 Where are the largest proportions of drug-related suspensions?
 
