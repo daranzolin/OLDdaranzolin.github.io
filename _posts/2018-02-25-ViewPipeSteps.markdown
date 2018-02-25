@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Introducing ViewPipeSteps: Observable Programming in R"
+title:  "Introducing ViewPipeSteps: Towards Observable Programming in R"
 date:   2018-02-25 13:15:02 -0700
 categories: Post
 tags: R addin
