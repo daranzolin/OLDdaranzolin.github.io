@@ -14,6 +14,8 @@ to observe the behavior of your program when subjected to concrete values.
 
 All true. She continues:
 
+<!--more-->
+
 > Our best tools are usually manual log statements and debuggers where you can step through code in one direction but which don’t facilitate the same type of observability that Excel produces without trying.
 
 Hold this thought.
