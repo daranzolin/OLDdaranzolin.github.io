@@ -20,14 +20,14 @@ All true. She continues:
 
 Hold this thought.
 
-Have you ever been on a programming 'roll'? Like you have you a flash of insight and a sequence of functions springs into mind. 
+Have you ever been on a programming 'roll'? Like you have a flash of insight and a sequence of functions springs into mind. 
 You start coding: *pipe-function-pipe-function-pipe-function...* You write a dozen or so lines before ever checking the validity 
 and output of each operation. Then you rub your hands together in excitement, highlight the chain, hit `command-enter`, and...Error.
 *Ugh, what happened?* you mutter.
 
 As an unabashed print debugger, I would check the error message and then insert a series of `View` statements wherever I think the
 error occurred. *What exactly did gather do? What does my new variable from mutate look like?* In other words, 
-I would need to *see* what was changing in my data frame along the way.
+I would need *to see* what was changing in my data frame along the way.
 
 This is a tedious and unenjoyable process. It makes me feel like a hack and reinforces 
 Sophie's argument about Excel's relative advantage. In Excel, we observe; while programming, we abstract. 
@@ -41,5 +41,4 @@ tabs, allowing you to observe all the output of your code, step-by-step:
 
 ![Alt Text](https://media.giphy.com/media/dZykYT3Z8kvlNnxaSK/giphy.gif)
 
-My hope is that it saves users a little time debugging. I think it could also be a useful teaching tool. For example, 
-an instructor could highlight a sequence and both explain *and show* what happens after each step. 
+My hope is that it saves users a little time debugging. I suspect it could also be a useful teaching tool. An instructor, for example, could highlight a sequence and both explain *and show* what happens after each step. 
