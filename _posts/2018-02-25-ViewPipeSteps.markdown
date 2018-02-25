@@ -26,11 +26,11 @@ and output of each operation. Then you rub your hands together in excitement, hi
 *Ugh, what happened?* you mutter.
 
 As an unabashed print debugger, I would check the error message and then insert a series of `View` statements wherever I think the
-error occurred. What exactly did `gather` do? What does my new variable from `mutate` look like? In other words, 
+error occurred. *What exactly did gather do? What does my new variable from mutate look like?* In other words, 
 I would need to *see* what was changing in my data frame along the way.
 
-As you may know, this is a tedious and unenjoyable process. It makes me feel like a hack and reinforces 
-Sophie's argument about Excel's relative advantage here: in Excel, we observe; while programming, we abstract. 
+This is a tedious and unenjoyable process. It makes me feel like a hack and reinforces 
+Sophie's argument about Excel's relative advantage. In Excel, we observe; while programming, we abstract. 
 She then issues a challenge:
 
 > How can we build tools that give us the best of both worlds? 
