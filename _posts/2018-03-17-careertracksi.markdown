@@ -15,12 +15,12 @@ positive, the overall success of the program remains to be seen.
 
 <!--more-->
 
-Career Tracks is meant to express a coherent bureaucracy. I don’t mean that pejoratively. Rather, Career Tracks creates 
+Career Tracks is meant to create a coherent bureaucracy. I don’t mean that pejoratively. Rather, Career Tracks expresses 
 an institutional dichotomy--these individuals perform these tasks, these individuals perform other tasks, and 
-so on and so forth. It is the important work of a massive, complex economy of peoples. It is human resources writ large. 
+so on and so forth. It is the important work of a massive, complex economy of peoples, benefitting individuals at every level. It is human resources writ large. 
 
 Career Tracks is instantiated by hundreds of job templates and tables. These tables communicate almost 
-everything you need to know about every UC position. Unfortunately, this information is squirreled away 
+everything you need to know about every UC position. They are concise, precise, and well-written. But unfortunately, the information is squirreled away 
 in hideous tables within .pdf and .docx files. There is subtle irony here: while Career Tracks makes grand 
 claims to transparency, the vehicles of its standards are barely human or machine readable. Here is what the 
 Digital Communications job template looks like:
@@ -133,7 +133,7 @@ parse_docx_tables <- function(docx_file) {
 Some highlights: the `nanair` and `janitor` packages, as well as `fill()` from the `tidyr` package. Transposing the entire
 table was also a nifty trick.
 
-For extra trick points, I created a progress bar while mapping over the entire directory of files:\
+For extra trick points, I created a progress bar while mapping over the entire directory of files:
 
 {% highlight r %}
 
