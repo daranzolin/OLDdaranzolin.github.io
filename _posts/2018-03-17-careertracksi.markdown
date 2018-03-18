@@ -103,11 +103,10 @@ parse_pdf_tables <- function(pdf_file) {
     map(fill, V1) %>% 
     map_df(fill, V1) 
   
-  meta <- transpose_as_tibble(job_table[c(1:6),]) 
-  meta <- set_first_row_as_names(meta)
+  meta <- as_tibble(t(job_table[c(1:6),])) %>% set_row_as_names(1)
   
   job_table <- job_table[-c(1:6),]
-  job_table <- job_table %>% 
+  job_table %>% 
     filter(V1 != "Job Level") %>% 
     group_by(V1) %>% 
     summarize_all(funs(paste(., collapse = " "))) %>% 
