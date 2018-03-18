@@ -30,7 +30,7 @@ Digital Communications job template looks like:
 You may have guessed where this is going. The language of Career Tracks almost cries out for text mining, and 
 the general hideousness of the templates demand cleaning and tidying. Tasks for which both R and my blog 
 are particularly well-suited. In Part I I’ll work through the cleaning process, and in Part II I’ll 
-venture a sentiment analysis.
+venture a sentiment analysis of UC bureacracy.
 
 My code for the cleaning process is below. I leaned heavily on the `tabulizer` and `docxtractor` packages, 
 but the former did a poor job parsing the tables within each files. As you can see in the `visdat` below,
