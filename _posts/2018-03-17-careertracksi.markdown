@@ -56,6 +56,8 @@ set_row_as_names <- function(x, row_num, clean = TRUE) {
   x
 }
 
+transpose_as_tibble <- function(x) as_tibble(t(x))
+
 unite_common_columns <- function(x) {
   unite_s <- partial(unite, sep = " ")
   x <- janitor::clean_names(x)
@@ -101,7 +103,7 @@ parse_pdf_tables <- function(pdf_file) {
     map(fill, V1) %>% 
     map_df(fill, V1) 
   
-  meta <- as_tibble(t(job_table[c(1:6),])) 
+  meta <- transpose_as_tibble(job_table[c(1:6),]) 
   meta <- set_first_row_as_names(meta)
   
   job_table <- job_table[-c(1:6),]
@@ -110,8 +112,7 @@ parse_pdf_tables <- function(pdf_file) {
     group_by(V1) %>% 
     summarize_all(funs(paste(., collapse = " "))) %>% 
     ungroup() %>% 
-    t() %>% 
-    as_tibble() %>% 
+    transpose_as_tibble() %>% 
     set_row_as_names(1) %>% 
     unite_common_columns() %>% 
     bind_cols(meta) %>% 
@@ -122,8 +123,7 @@ parse_docx_tables <- function(docx_file) {
   
   docx <- docxtractr::read_docx(docx_file)
   suppressMessages(docxtractr::docx_extract_all_tbls(docx, guess_header = FALSE))[[1]] %>% 
-    t() %>% 
-    as_tibble() %>% 
+    transpose_as_tibble() %>% 
     set_first_row_as_names() %>% 
     unite_common_columns()
 }
