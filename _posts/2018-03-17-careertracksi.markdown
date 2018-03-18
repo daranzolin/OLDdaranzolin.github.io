@@ -124,7 +124,7 @@ parse_docx_tables <- function(docx_file) {
   docx <- docxtractr::read_docx(docx_file)
   suppressMessages(docxtractr::docx_extract_all_tbls(docx, guess_header = FALSE))[[1]] %>% 
     transpose_as_tibble() %>% 
-    set_first_row_as_names() %>% 
+    set_row_as_names(1) %>% 
     unite_common_columns()
 }
 
