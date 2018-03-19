@@ -157,7 +157,7 @@ career_tracks <- career_tracks_list %>%
 
 As there were over 300 templates, this operation took several minutes, but it was cool to see the countdown. I was able to speed
 things up a little by postponing some additional formatting until I had one large table instead of reshaping hundreds of little tables
-and then joining them together. I created a visual sequence of the cleaning and tidying sequence in the gif below:
+and then joining them together. A visual sequence of the cleaning and tidying sequence in the gif below, [courtesy of ViewPipeSteps:](https://github.com/daranzolin/ViewPipeSteps)
 
 
 ![Alt Text](https://media.giphy.com/media/mXs7Dhofe5YGnu9bnz/giphy.gif)
