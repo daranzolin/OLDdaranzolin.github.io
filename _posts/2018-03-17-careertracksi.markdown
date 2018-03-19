@@ -103,7 +103,7 @@ parse_pdf_tables <- function(pdf_file) {
     map(fill, V1) %>% 
     map_df(fill, V1) 
   
-  meta <- as_tibble(t(job_table[c(1:6),])) %>% set_row_as_names(1)
+  meta <- transpose_as_tibble(job_table[c(1:6),])) %>% set_row_as_names(1)
   
   job_table <- job_table[-c(1:6),]
   job_table %>% 
