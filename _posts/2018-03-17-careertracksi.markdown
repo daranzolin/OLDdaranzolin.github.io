@@ -191,9 +191,9 @@ career_tracks <- career_tracks %>%
 
 Here's a `View()` of the data now:
 
-![useful image]({{ site.url }}/assets/viewcareer.png)
+![useful image]({{ site.url }}/assets/careerview2.png)
 
-Much better! But I admit the final `vis_miss` was disappointing:
+Better. But I admit the final `vis_miss` was disappointing:
 
 ![useful image]({{ site.url }}/assets/vismiss3.png)
 Whether this is a healthy sample remains to be seen in Part II. In the meantime, I may ponder how to get more of the missing data...
