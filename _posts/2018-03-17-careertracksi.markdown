@@ -163,14 +163,11 @@ Finally, I downloaded some additional files and joined them all together:
 
 {% highlight r %}
 
-download.file("http://shr.ucsc.edu/policy/special-projects/career-tracks/Resources/Career%20Tracks%20Job%20Function%20Summary.xlsx",
-              destfile = "job_families_functions_descriptions.xlsx")
 download.file("http://shr.ucsc.edu/policy/special-projects/career-tracks/Resources/Career%20Tracks%20Job%20Title%20Listing%202-15-17.pdf",
               destfile = "career_tracks_info.pdf")
 download.file("http://shr.ucsc.edu/policy/special-projects/career-tracks/Resources/Salary%20Range%20Structure_July2016.pdf",
               destfile = "career_salary_grades.pdf")
 
-job_families_functions <- readxl::read_excel("job_families_functions_descriptions.xlsx")
 career_tracks_info <- tabulizer::extract_tables("./career_tracks_info.pdf")
 salaries <- tabulizer::extract_tables("./career_salary_grades.pdf")
 
@@ -182,14 +179,13 @@ salaries <- salaries %>%
   map_df(data.frame) %>% 
   set_row_as_names(2) 
 
-job_families_functions <- janitor::clean_names(job_families_functions)
-
-career_tracks_all <- career_tracks_info %>%
-  filter(job_family != "Job Family") %>% 
+career_tracks <- career_tracks %>% 
+  left_join(career_tracks_info %>% 
+              filter(job_family != "Job Family") %>% 
+              select(job_family:job_code, status, grade), by = "job_code") %>% 
   left_join(salaries, by = "grade") %>% 
-  left_join(job_families_functions, by = c("job_family", "job_function")) %>% 
   mutate_at(vars(matches("grade|minimum|midpoint|maximum")), coerce_numeric) %>% 
-  left_join(career_tracks %>% select(job_code, certifications:special_conditions))
+  select(contains("job"), everything()) 
 
 {% endhighlight %}
 
@@ -199,8 +195,6 @@ Here's a `View()` of the data now:
 
 Much better! But I admit the final `vis_miss` was disappointing:
 
-![useful image]({{ site.url }}/assets/vismiss.png)
-
-Ugh, so much of the key responsibilities and education is missing! I think this is still a healthy sample, but that remains to 
-be seen in Part II. In the meantime, I may ponder how to get more of the missing data...
+![useful image]({{ site.url }}/assets/vismiss3.png)
+Whether this is a healthy sample remains to be seen in Part II. In the meantime, I may ponder how to get more of the missing data...
 
