@@ -160,7 +160,7 @@ things up a little by postponing some additional formatting until I had one larg
 and then joining them together. A visual sequence of the cleaning and tidying sequence in the gif below, [courtesy of ViewPipeSteps:](https://github.com/daranzolin/ViewPipeSteps)
 
 
-![Alt Text](https://media.giphy.com/media/mXs7Dhofe5YGnu9bnz/giphy.gif)
+![Alt Text](https://media.giphy.com/media/2SYbPu5PcaTz9RSLoR/giphy.gif)
 
 Finally, I downloaded some additional files and joined them all together:
 
