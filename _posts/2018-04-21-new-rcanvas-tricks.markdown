@@ -18,6 +18,9 @@ Add enrollments to any published course.
 
 {% highlight r %}
 
+library(rcanvas) #devtools::install_github("daranzolin/rcanvas")
+library(tidyverse)
+
 list(
   course_id = 43432,
   user_ids = c(32324, 434423, 434343, 443242),
@@ -47,7 +50,7 @@ Push files from your local machine to Canvas with `purrr`.
 
 png_files <- dir(pattern = ".png$")
 list_upload <- list(course_id = 1185256, file_name = png_files)
-purrr::pwalk(list_upload, upload_course_file)
+pwalk(list_upload, upload_course_file)
 
 {% endhighlight %}
 
