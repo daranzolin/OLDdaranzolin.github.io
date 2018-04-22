@@ -33,7 +33,7 @@ list(
 
 ### Comment and Grade Submissions
 
-Programatically comment and grade student submissions.
+Programatically comment and ~~shame~~ grade students.
 
 {% highlight r %}
 
