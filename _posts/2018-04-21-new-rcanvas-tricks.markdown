@@ -74,6 +74,23 @@ add_multiple_group_users(group_id=c(23, 24), user_ids=c(327, 328))
 
 {% endhighlight %}
 
+### Create Assignments
+
+Create assignments in R.
+
+{% highlight r %}
+
+create_course_assigment(course_id = 1185256, 
+                        name = "Readings 1", 
+                        points_possible = 100, 
+                        unlock_at = "2018-05-01T08:00:00Z", 
+                        due_at = "2018-06-01T20:00:00Z", 
+                        description = "Readings in Post-Structuralist and Lacanian Feminism: Saussere, Derrida, Kraftchick", 
+                        published = TRUE)
+
+{% endhighlight %}
+
+
 And much much more! [Check the README for additional features,]((https://github.com/daranzolin/rcanvas)) file an issue if you encounter any issues, or submit a pull request
 to add something new!
 
