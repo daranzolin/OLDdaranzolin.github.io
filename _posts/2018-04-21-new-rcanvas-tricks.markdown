@@ -6,8 +6,8 @@ categories: Post
 tags: R rcanvas
 ---
 
-Canvas is, in my humble opinion, the best LMS around, and [my second package `rcanvas`](https://github.com/daranzolin/rcanvas) is for all the students, 
-TAs, instructors, and analysts lucky enough to reside there. A growing number of contributors has made
+Canvas is, in my humble opinion, the best LMS around, and [my second package rcanvas is for all the students, 
+TAs, instructors, and analysts lucky enough to reside there.]((https://github.com/daranzolin/rcanvas)) A growing number of contributors has made
 it easier than ever to automate various workflows, and I'm excited to show off some that new functionality here.
 
 <!--more-->
@@ -71,6 +71,6 @@ add_multiple_group_users(group_id=c(23, 24), user_ids=c(327, 328))
 
 {% endhighlight %}
 
-And much much more! Check the README for additional features, file an issue if you encounter any issues, or submit a pull request
+And much much more! [Check the README for additional features,]((https://github.com/daranzolin/rcanvas)) file an issue if you encounter any issues, or submit a pull request
 to add something new!
 
