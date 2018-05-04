@@ -7,7 +7,7 @@ tags: R rcanvas
 ---
 
 Canvas is, in my humble opinion, the best LMS around, and [my second package rcanvas is for all the students, 
-TAs, instructors, and analysts lucky enough to reside there.]((https://github.com/daranzolin/rcanvas)) A growing number of contributors has made
+TAs, instructors, and analysts lucky enough to reside there.](https://github.com/daranzolin/rcanvas) A growing number of contributors has made
 it easier than ever to automate various workflows, and I'm excited to show off some that new functionality here.
 
 <!--more-->
