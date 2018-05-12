@@ -21,7 +21,7 @@ in the future. An ambitious goal to be sure.
 
 The visualization I've selected for reproduction is [U.S. Population by Age and Sex.](https://beta.observablehq.com/@mbostock/u-s-population-by-age-and-sex/3)
 What caught my attention was how the interelationship between three variables (Age, Gender, and Population) was visualized so
-cleanly within one, two-dimensional space. It's just a badass chart. All I knew to start was that
+handsomely within one, two-dimensional space. It's just a badass chart. All I knew to start was that
 I would eventually and somehow use the `fill` option in ggplot. The rest was making the way by walking.
 
 ### Getting the Data
