@@ -6,7 +6,7 @@ categories: Post
 tags: R ggplot
 ---
 
-Mike Bostock is the *Pontifex Maximus* of data visualization. As a d3.js novice, I spend hours each week poring over his work
+Mike Bostock is the *Pontifex Maximus* of data visualization. As a d3.js novice, I spend hours each week poring over his creations
 [over at Observable HQ,](https://beta.observablehq.com/) a brilliant new medium to share compelling data visualizations and 
 quantitative analysis. And because, as they say, imitation is the highest form of flattery, I've decided to reproduce some of his
 recent work in R (ggplot).
