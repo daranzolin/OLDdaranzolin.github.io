@@ -174,8 +174,7 @@ df_3 <- df_2 %>%
  
  ![useful image]({{ site.url }}/assets/bostockage.png)
  
- I didn't push the 'Age' axis title above the ticks, nor did I try mirror Bostock's age axis. But besides those two minor details,
- I think it's a pretty good imitation! 
+ My colors are a little off, I didn't push the 'Age' axis title above the ticks, and nor did I try mirror Bostock's age axis ticks. But besides those three minor details, I think it's a faithful imitation! 
  
  Now for the reverse: to reproduce a ggplot in D3...
 
