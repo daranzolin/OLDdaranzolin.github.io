@@ -12,7 +12,7 @@ quantitative analysis. And because, as they say, imitation is the highest form o
 recent work in R (ggplot).
 
 My interest in reproduction, however, goes beyond meer admiration. While I've enjoyed getting to know D3, I confess 
-it's hard to struggle through the unfamiliar mechanics, knowing I could have produced a ggplot facimile in a 
+it's hard to struggle through the unfamiliar mechanics, knowing I could have produced a ggplot facsimile in a 
 fraction of the time. I tell myself it builds character. But at a programmatic level, I hope to catch a glimpse of what makes
 these visualization paradigms unique and how ~~easy it is to google their respective errors~~ each tool might be leveraged
 in the future. An ambitious goal to be sure.
@@ -21,12 +21,12 @@ in the future. An ambitious goal to be sure.
 
 The visualization I've selected for reproduction is [U.S. Population by Age and Sex.](https://beta.observablehq.com/@mbostock/u-s-population-by-age-and-sex/3)
 What caught my attention was how the interelationship between three variables (Age, Gender, and Population) was visualized so
-cleanly within one two-dimensional space. It's just a badass chart. All I knew to start was that
+cleanly within one, two-dimensional space. It's just a badass chart. All I knew to start was that
 I would eventually and somehow use the `fill` option in ggplot. The rest was making the way by walking.
 
 ### Getting the Data
 
-The population data comes from the census API, but whipping up a function and interating through the variables was relatively 
+The population data comes from [the census API,](https://api.census.gov) and whipping up a function and interating through the variables was relatively 
 straightforward.
 
 {% highlight r %}
@@ -168,7 +168,7 @@ df_3 <- df_2 %>%
  
  **Me and R and ggplot:**
  
- ![useful image]({{ site.url }}/assets/ageplot2.png)
+ ![useful image]({{ site.url }}/assets/ageplot3.png)
  
  **Bostock and JS and d3.js**
  
