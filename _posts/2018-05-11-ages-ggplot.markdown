@@ -166,7 +166,11 @@ df_3 <- df_2 %>%
  
  How'd I do? You decide:
  
- ![useful image]({{ site.url }}/assets/ageplot1.png)
+ **Me and R and ggplot:**
+ 
+ ![useful image]({{ site.url }}/assets/ageplot2.png)
+ 
+ **Bostock and JS and d3.js**
  
  ![useful image]({{ site.url }}/assets/bostockage.png)
  
