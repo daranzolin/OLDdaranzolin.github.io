@@ -168,7 +168,7 @@ df_3 <- df_2 %>%
  
  **Me and R and ggplot:**
  
- ![useful image]({{ site.url }}/assets/ageplot3.png)
+ ![useful image]({{ site.url }}/assets/ageplot4.png)
  
  **Bostock and JS and d3.js**
  
