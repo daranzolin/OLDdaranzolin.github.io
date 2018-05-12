@@ -164,7 +164,9 @@ df_3 <- df_2 %>%
   
  {% endhighlight %}
  
- How'd I do? You decide:
+ How'd I do? You decide. A brief explanation: 
+ 
+ > This chart compares the estimated female and male populations by age in the United States as of 2015. For each age bracket, red represents a larger female population, blue represents a larger male population, and gray represents the smaller of the two. The total estimated population is 316,515,021.
  
  **Me and R and ggplot:**
  
