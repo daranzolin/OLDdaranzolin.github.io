@@ -110,8 +110,7 @@ Confession: I do not believe some of what follows is essential to the final plot
 to go back and change anything now. Here I was pondering how to scale the grey values in the original plot, but the solution
 jumped out after perusing Bostock's original code.
 
-Aside: there was some recent Twitter chatter about the `rowwise()` function as an ugly stepchild, and I've always wondered why
-I'm the only one who seems to use it. For me, a mutated value often doesn't change down a column until I specify the rowwise function.
+Also, as an aside: there was some recent Twitter chatter about the `rowwise()` function as an ugly stepchild, and I've always wondered why I'm the only one who seems to use it. For me, a mutated value often doesn't change down a column until I specify the rowwise function.
 
 {% highlight r %}
 
@@ -137,7 +136,7 @@ df_3 <- df_2 %>%
   
  {% endhighlight %}
  
- The end was in site. I think at this point I've already exceeded the number of lines within Bostock's code, so I'm not
+ The end was in sight. I think at this point I've already exceeded the number of lines within Bostock's code, so I'm not
  winning any points for brevity here. But feast your eyes on this ggplot call!
  
  {% highlight r %}
