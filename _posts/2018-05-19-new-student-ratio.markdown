@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Inching Towards tidy eval"
-date:   2018-05-11 13:15:02 -0700
+title:  "Calculating and Modeling New/Returning Students"
+date:   2018-05-19 13:15:02 -0700
 categories: Post
 tags: R 
 ---
