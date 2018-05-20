@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Calculating and Modeling New/Returning Students"
+title:  "Calculating New/Returning Students with Factors and dplyr"
 date:   2018-05-19 13:15:02 -0700
 categories: Post
 tags: R 
@@ -10,8 +10,7 @@ I have yet to learn the [tidy evaluation paradigm.](https://www.rstudio.com/reso
 DRY principles with a combination of hacks and brute force gets the job done. But a recent challenge at work took me perilously
 to the edge.
 
-The task was this: calculate the ratio of returning and new students by academic quarter. Our working definition of a returning
-student is having taken any course in a previous quarter.   
+The task was this: calculate the ratio of returning and new students by academic quarter. Our working definition of a returning student is having taken any course in a previous quarter. 
 
 Let's build some sample data:
 
@@ -310,5 +309,6 @@ ggplot(all_quarters, aes(quarter, students, fill = student)) +
  
  Obviously in this closed, generated data, the proportion of returning students grows with each successive quarter. But with
  some additional tinkering, some interesting, seasonal, patterns may emerge.
+ 
 
 
