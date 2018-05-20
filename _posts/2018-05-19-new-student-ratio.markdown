@@ -111,9 +111,9 @@ to an ascending integer:
  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33
 [34] 34
 ```
-I then tried to imagine the data frame as timeline. The temporal markers are the quarters. For example, I could identify
-all the new students for a given quarter by (1) subsetting the data with all quarters "less than" (earlier than) that specific quarter,
-(2) grouping each student's unique quarters, (3) filtering for the quarter, and then checking if the unique quarters match the given quarter.
+I then tried to imagine the data frame as a timeline with the temporal markers as quarters. For example, I could identify
+all the new students for a given quarter by (1) subsetting the data with all quarters "less than" (earlier than) that specific quarter, (2) identifying the unique quarters by student, and (3) filtering for the quarter, and then checking if the unique quarters match the given quarter.
+
 The entirety of my function is below, but I'll break the pipeline down here.
 
 ### Step 1: Filtering all Earlier Quarters
@@ -275,7 +275,9 @@ calc_new_students("Fall 2015", school)
 3 New       STEM               37 Fall 2015
 4 Returning STEM              105 Fall 2015
 ```
+Here's a sequence of the transformations, [courtesy of ViewPipeSteps:](https://github.com/daranzolin/ViewPipeSteps)
 
+![Alt Text](https://media.giphy.com/media/bisMIm8WfahwDDDnSI/giphy.gif)
 
 ### Step 5: Iterate through all Quarters
 
