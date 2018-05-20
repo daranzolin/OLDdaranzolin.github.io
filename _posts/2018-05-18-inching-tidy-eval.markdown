@@ -118,6 +118,8 @@ The entirety of my function is below, but I'll break the pipeline down here.
 
 ### Step 1: Filtering all Earlier Quarters
 
+The `quarter_td` argument is first factored with the same levels as the data frame, then converted to an integer. I'm then able to filter the earlier quarters within the data frame.
+
 {% highlight r %}
 
 calc_new_students <- function(quarter_td, ...) {
@@ -152,10 +154,9 @@ calc_new_students <- function(quarter_td, ...) {
 
 ```
 
-The `quarter_td` argument is first factored with the same levels as the data frame, then converted to an integer. I'm then able
-to filter the earlier quarters within the data frame.
-
 ### Step 2: Indentify Unique Quarters by Student
+
+Collapsing the unique quarters into a vector produces a snapshot of their registration history.
 
 {% highlight r %}
 
@@ -229,25 +230,17 @@ calc_new_students("Fall 2015") %>%
 
 ### Step 4: Group the New and Returning Students by Other Columns
 
-I was able to generalize the function to group by other column names by passing them through `...`. 
+I'm able to generalize the function to group by other column names by passing them through `...`. 
 
 {% highlight r %}
 
 calc_new_students <- function(quarter_td, ...) {
     
-  quarter_td_int <- as.integer(factor(quarter_td, levels = quarters))
-  
-  df %>% 
-    filter(as.integer(quarter) <= quarter_td_int) %>% 
-    group_by(student_id) %>%
-    mutate(unique_quarters = paste(unique(quarter), collapse = ", ")) %>%
-    ungroup() %>%
-    filter(as.integer(quarter) == quarter_td_int) %>% 
-    distinct(student_id, .keep_all = TRUE) %>%
-    mutate(student = if_else(unique_quarters == quarter_td, "New", "Returning")) %>% 
+    ...
     group_by(student, ...) %>% 
     summarize(students = n()) %>% 
-    arrange(...)
+    arrange(...) %>% 
+    mutate(quarter = quarter_td)
 }
 
 calc_new_students("Fall 2015", department) 
@@ -256,34 +249,37 @@ calc_new_students("Fall 2015", school)
 {% endhighlight %}
 
 ```
-# A tibble: 10 x 3
+# A tibble: 10 x 4
 # Groups:   student [2]
-   student   department       students
-   <chr>     <chr>               <int>
- 1 New       English                15
- 2 Returning English                62
- 3 New       History                15
- 4 Returning History                54
- 5 New       Math                   14
- 6 Returning Math                   65
- 7 New       Modern Languages       17
- 8 Returning Modern Languages       45
- 9 New       Science                23
-10 Returning Science                40
+   student   department       students quarter  
+   <chr>     <chr>               <int> <chr>    
+ 1 New       English                15 Fall 2015
+ 2 Returning English                62 Fall 2015
+ 3 New       History                15 Fall 2015
+ 4 Returning History                54 Fall 2015
+ 5 New       Math                   14 Fall 2015
+ 6 Returning Math                   65 Fall 2015
+ 7 New       Modern Languages       17 Fall 2015
+ 8 Returning Modern Languages       45 Fall 2015
+ 9 New       Science                23 Fall 2015
+10 Returning Science                40 Fall 2015
 ```
 
 ```
-# A tibble: 4 x 3
+# A tibble: 4 x 4
 # Groups:   student [2]
-  student   school       students
-  <chr>     <chr>           <int>
-1 New       Liberal Arts       47
-2 Returning Liberal Arts      161
-3 New       STEM               37
-4 Returning STEM              105
+  student   school       students quarter  
+  <chr>     <chr>           <int> <chr>    
+1 New       Liberal Arts       47 Fall 2015
+2 Returning Liberal Arts      161 Fall 2015
+3 New       STEM               37 Fall 2015
+4 Returning STEM              105 Fall 2015
 ```
+
 
 ### Step 5: Iterate through all Quarters
+
+Now we can loop through all the quarters and bind the new and returning students into a data frame:
 
 {% highlight r %}
 
@@ -291,5 +287,26 @@ all_quarters <- quarters %>%
   map_dfr(calc_new_students)
 
 {% endhighlight %}
+
+And a final visualization!
+
+{% highlight r %}
+
+ggplot(all_quarters, aes(quarter, students, fill = student)) +
+  geom_bar(stat = "identity", position = "fill") +
+  geom_hline(yintercept = 0.5, linetype = "dashed") +
+  labs(x = "Quarter",
+       y = "",
+       title = "Ratio of New and Returning Students",
+       subtitle = "2010-2018") +
+  hrbrthemes::theme_ipsum() +
+  theme(axis.text.x = element_text(angle = 45))
+  
+{% endhighlight %}
+
+ ![useful image]({{ site.url }}/assets/ratioplot.png)
+ 
+ Obviously in this closed, generated data, the proportion of returning students grows with each successive quarter. But with
+ some additional tinkering, some interesting, seasonal, patterns may emerge.
 
 
