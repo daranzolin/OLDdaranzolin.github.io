@@ -15,14 +15,12 @@ My original goal was to design an algorithm that could generate a hypothetical s
 
 ### Getting the Program Data
 
-Load packages
-
 I needed data about Extension’s courses--the more the merrier. As an employee, I could have retrieved the data through other means, but I enjoy web scraping and was curious if one could rely solely on our public website.
 
 I first navigated to the schedule of Internet Programming and Development, the program in which I am currently enrolled. Before attempting to scrape any website, you should make sure it’s legal: most sites have Terms and Conditions forbidding any sort of web crawler or scraper. A quick way to check is with the `robotstxt` package:
 {% highlight r %}
 
-paths_allowed("https://www.ucsc-extension.edu/certificate-program/software-development/internet-programming")
+robotstxt::paths_allowed("https://www.ucsc-extension.edu/certificate-program/software-development/internet-programming")
  www.ucsc-extension.edu 
  
 {% endhighlight %}
@@ -35,9 +33,9 @@ We’re good.
 
 The offering data on the page resides in several tables but presents an interesting conundrum--some of the data is represented by images. Fortunately, these icons have “alt” html tags that indicate what they represent. The icon highlighted below, for example, has an alt tag of “Classroom and Online”:
 
-After some tinkering, the `.cols-7 .views-field` CSS selector will scrape 252 nodes from this page, one for every table cell. Because the structure of each table is identical, we can reformat the nodes into a single table without much effort.
-
 ![useful image]({{ site.url }}/assets/unexcss.png)
+
+After some tinkering, the `.cols-7 .views-field` CSS selector will scrape 252 nodes from this page, one for every table cell. Because the structure of each table is identical, we can reformat the nodes into a single table without much effort.
 
 First, we load our packages, read the HTML, and define some helper functions to parse data:
 
@@ -122,7 +120,11 @@ get_every <- function(vec, start, nth) vec[seq(start, length(vec), nth)]
 ge <- partial(get_every, vec = all_table_cells, nth = 7)
 c(code, name, units, fall, winter, spring, summer) %<-% map(1:7, ge)
 
+{% endhighlight %}
+
 We’ll return to the `get_every()` function later, so I simplified the subsequent calls with `partial()` from the `purrr` package before unpacking the subsequent list with the `zeallot` operator. I now have seven vectors of length 36. Assigning them to columns within a tibble, and then tidying the subsequent data is done as follows:
+
+{% highlight r %}
 
 program_data <- tibble(code, name, units, fall, winter, spring, summer) %>% 
   filter(name != "Offering") %>% #removes the header rows
@@ -281,11 +283,11 @@ My definition of an “online” course is fairly ridgid. Any course classified 
 
 I omitted some of the quarterly data for reasons I explained above. I never bothered to figure out how to effectively project future quarter dates, which could have been used to calculate time-to-completion. Instead, we’re left with a half-decent approximation. The final scheduling function, `plan_my_program_schedule()` is below. This monstrosity of a function has six parameters: 
 
-`program_data` -- the scraped program data.
-`days_available` -- a vector indicating the weekdays the student is available.
-`online_willing` -- a boolean indicating whether the student is willing to take online courses.
-`weekday_morning_available` -- a boolean indicating whether the student is available on mornings during the week.
-`cost_threshold` -- the maximum amount of money the student is willing to spend.
+* `program_data` -- the scraped program data.
+* `days_available` -- a vector indicating the weekdays the student is available.
+* `online_willing` -- a boolean indicating whether the student is willing to take online courses.
+* `weekday_morning_available` -- a boolean indicating whether the student is available on mornings during the week.
+* `cost_threshold` -- the maximum amount of money the student is willing to spend.
 
 In the end, I substituted “algorithm” with a “randomize-combinations-until-it-works” approach. The function first calculates the maximum combinations of six unique courses within the program data. Within the while loop, six random course codes are sampled and then run through a series of checks corresponding to the function inputs. The minimum number of credits (14) is also checked, as is whether or not a “core” class is included in the generated schedule. If the maximum possible combinations are made, the while loop breaks and apologizes to the user. Otherwise, it returns the first combination that passes all checks.
 
