@@ -281,7 +281,7 @@ My definition of an “online” course is fairly ridgid. Any course classified 
 
 ### The Scheduling “Algorithm”
 
-I omitted some of the quarterly data for reasons I explained above. I never bothered to figure out how to effectively project future quarter dates, which could have been used to calculate time-to-completion. Instead, we’re left with a half-decent approximation. The final scheduling function, `plan_my_program_schedule()` is below. This monstrosity of a function has six parameters: 
+I omitted some of the quarterly data for reasons I explained above. I never bothered to figure out how to effectively project future quarter dates, which could have been used to calculate time-to-completion. Instead, we’re left with a half-decent approximation. The final scheduling function, `plan_my_program_schedule()` is below. This monstrosity of a function has five parameters: 
 
 * `program_data` -- the scraped program data.
 * `days_available` -- a vector indicating the weekdays the student is available.
