@@ -17,7 +17,7 @@ My original goal was to design an algorithm that could generate a hypothetical s
 
 I needed data about Extension’s courses--the more the merrier. As an employee, I could have retrieved the data through other means, but I enjoy web scraping and was curious if one could rely solely on our public website.
 
-I first navigated to the schedule of Internet Programming and Development, the program in which I am currently enrolled. Before attempting to scrape any website, you should make sure it’s legal: most sites have Terms and Conditions forbidding any sort of web crawler or scraper. A quick way to check is with the `robotstxt` package:
+I first navigated to [the schedule of Internet Programming and Development,](https://www.ucsc-extension.edu/certificate-program/software-development/internet-programming) the program in which I am currently enrolled. Before attempting to scrape any website, you should make sure it’s legal: most sites have Terms and Conditions forbidding any sort of web crawler or scraper. A quick way to check is with the `robotstxt` package:
 {% highlight r %}
 
 robotstxt::paths_allowed("https://www.ucsc-extension.edu/certificate-program/software-development/internet-programming")
